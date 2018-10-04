@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://service.commonb2b.lincoln.seanuts.co.jp/" xmlns:tns="http://service.commonb2b.lincoln.seanuts.co.jp/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AgtRoomStatusUpdateArray" type="tns:AgtRoomStatusUpdateArray"/>
+
+  <xs:element name="AgtRoomStatusUpdateArrayResponse" type="tns:AgtRoomStatusUpdateArrayResponse"/>
+
+  <xs:element name="AgtRoomTypeDownload" type="tns:AgtRoomTypeDownload"/>
+
+  <xs:element name="AgtRoomTypeDownloadResponse" type="tns:AgtRoomTypeDownloadResponse"/>
+
+  <xs:element name="LoginConfirm" type="tns:LoginConfirm"/>
+
+  <xs:element name="LoginConfirmResponse" type="tns:LoginConfirmResponse"/>
+
+  <xs:element name="PlanDownload" type="tns:PlanDownload"/>
+
+  <xs:element name="PlanDownloadResponse" type="tns:PlanDownloadResponse"/>
+
+  <xs:element name="PlanStatusUpdateArray" type="tns:PlanStatusUpdateArray"/>
+
+  <xs:element name="PlanStatusUpdateArrayResponse" type="tns:PlanStatusUpdateArrayResponse"/>
+
+  <xs:element name="StockDataDownload" type="tns:StockDataDownload"/>
+
+  <xs:element name="StockDataDownloadResponse" type="tns:StockDataDownloadResponse"/>
+
+  <xs:element name="TariffDataDownload" type="tns:TariffDataDownload"/>
+
+  <xs:element name="TariffDataDownloadResponse" type="tns:TariffDataDownloadResponse"/>
+
+  <xs:element name="PlanSalesPeriodUpdate" type="tns:PlanSalesPeriodUpdate"/>
+
+  <xs:element name="PlanSalesPeriodUpdateResponse" type="tns:PlanSalesPeriodUpdateResponse"/>
+
+  <xs:complexType name="PlanStatusUpdateArray">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:PlanStatusUpdateArrayRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanStatusUpdateArrayRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanUpdateRequestInfos" type="tns:PlanUpdateRequestInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanUpdateRequestInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="StopStartDivision" type="xs:string" minOccurs="0"/>
+      <xs:element name="PriceCode1" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode2" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode3" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode4" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode5" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode6" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode7" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode8" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode9" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode10" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanStatusUpdateArrayResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:PlanStatusUpdateArrayResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanStatusUpdateArrayResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanUpdateResultInfos" type="tns:PlanUpdateResultInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanUpdateResultInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="SaleStopState" type="xs:string" minOccurs="0"/>
+      <xs:element name="PriceCode1" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode2" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode3" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode4" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode5" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode6" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode7" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode8" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode9" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode10" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockDataDownload">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:StockDataDownloadRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockDataDownloadRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="AcquireDayNums" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockDataDownloadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:StockDataDownloadResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockDataDownloadResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="StockDatas" type="tns:StockData" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockData">
+    <xs:sequence>
+      <xs:element name="Date" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtRoomQuantity" type="xs:int" minOccurs="0"/>
+      <xs:element name="SaleStopState" type="xs:string" minOccurs="0"/>
+      <xs:element name="SaleQuantity" type="xs:int" minOccurs="0"/>
+      <xs:element name="AgtStockQuantity" type="xs:int" minOccurs="0"/>
+      <xs:element name="ClosingState" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanDownload">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:PlanDownloadRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanDownloadRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanDownloadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:PlanDownloadResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanDownloadResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtPlanRoomInfos" type="tns:AgtPlanRoomInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtPlanRoomInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanIndicationName" type="xs:string" minOccurs="0"/>
+      <xs:element name="SalesState" type="xs:string" minOccurs="0"/>
+      <xs:element name="ReserveInformationEndDay" type="xs:int" minOccurs="0"/>
+      <xs:element name="ReserveInformationEndTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="EnforcementPeriodFrom" type="xs:string" minOccurs="0"/>
+      <xs:element name="EnforcementPeriodTo" type="xs:string" minOccurs="0"/>
+      <xs:element name="RoomRateOrPersonalRate" type="xs:string" minOccurs="0"/>
+      <xs:element name="Prices" type="tns:Price" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Price">
+    <xs:sequence>
+      <xs:element name="PriceCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="PriceName" type="xs:string" minOccurs="0"/>
+      <xs:element name="MonPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="TuePrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="WedPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="TurPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="FriPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="SatPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="SunPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="WeekdayPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="HolidayPrice" type="xs:int" minOccurs="0"/>
+      <xs:element name="BeforeHolidayPrice" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TariffDataDownload">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:TariffDataDownloadRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TariffDataDownloadRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="AcquireDayNums" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TariffDataDownloadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:TariffDataDownloadResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TariffDataDownloadResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="TariffDatas" type="tns:TariffData" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TariffData">
+    <xs:sequence>
+      <xs:element name="Date" type="xs:string" minOccurs="0"/>
+      <xs:element name="SaleStopState" type="xs:string" minOccurs="0"/>
+      <xs:element name="PriceCode1" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode2" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode3" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode4" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode5" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode6" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode7" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode8" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode9" type="xs:int" minOccurs="0"/>
+      <xs:element name="PriceCode10" type="xs:int" minOccurs="0"/>
+      <xs:element name="ClosingState" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoginConfirm">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:LoginConfirmRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoginConfirmRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoginConfirmResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:LoginConfirmResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoginConfirmResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomTypeDownload">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:AgtRoomTypeDownloadRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomTypeDownloadRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomTypeDownloadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:AgtRoomTypeDownloadResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomTypeDownloadResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtRoomInfos" type="tns:AgtRoomInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtRoomIndicationName" type="xs:string" minOccurs="0"/>
+      <xs:element name="CapacitMinPersons" type="xs:int" minOccurs="0"/>
+      <xs:element name="CapacitMaxPersons" type="xs:int" minOccurs="0"/>
+      <xs:element name="StockEntryPeriodFrom" type="xs:string" minOccurs="0"/>
+      <xs:element name="StockEntryPeriodTo" type="xs:string" minOccurs="0"/>
+      <xs:element name="TotalRoomsBlock" type="xs:int" minOccurs="0"/>
+      <xs:element name="GuestRoomAssortment" type="xs:string" minOccurs="0"/>
+      <xs:element name="SalesState" type="xs:string" minOccurs="0"/>
+      <xs:element name="ReserveInformationEndDay" type="xs:int" minOccurs="0"/>
+      <xs:element name="ReserveInformationEndTime" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomStatusUpdateArray">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:AgtRoomStatusUpdateArrayRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomStatusUpdateArrayRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+      <xs:element name="RoomUpdateRequestInfos" type="tns:RoomUpdateRequestInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoomUpdateRequestInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="StopStartDivision" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtStockQuantity" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomStatusUpdateArrayResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:AgtRoomStatusUpdateArrayResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgtRoomStatusUpdateArrayResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="RoomUpdateResultInfos" type="tns:RoomUpdateResultInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoomUpdateResultInfo">
+    <xs:sequence>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="AppointedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="SaleStopState" type="xs:string" minOccurs="0"/>
+      <xs:element name="AgtStockQuantity" type="xs:int" minOccurs="0"/>
+      <xs:element name="ClosingState" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdate">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:PlanSalesPeriodUpdateRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdateRequest">
+    <xs:sequence>
+      <xs:element name="LoginId" type="xs:string" minOccurs="0"/>
+      <xs:element name="LoginPwd" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanSalesPeriodUpdateRequestInfos" type="tns:PlanSalesPeriodUpdateRequestInfos" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdateRequestInfos">
+    <xs:sequence>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="EnforcementPeriodTo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:PlanSalesPeriodUpdateResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdateResult">
+    <xs:sequence>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanSalesPeriodUpdateResultInfos" type="tns:PlanSalesPeriodUpdateResultInfos" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlanSalesPeriodUpdateResultInfos">
+    <xs:sequence>
+      <xs:element name="ScAgtPlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ScAgtRoomCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="Success" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="EnforcementPeriodTo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

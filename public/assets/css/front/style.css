@@ -1,0 +1,3097 @@
+@charset "UTF-8";
+
+/*=============全体================*/
+html , body {
+	color:#333333;
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic',Arial, sans-serif;
+	font-size:12px;
+	line-height:150%;
+	height: 100%;
+}
+input,select,textarea {
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic',Arial, sans-serif;
+	font-size:12px;
+	line-height:1.5;
+	box-sizing: border-box;
+}
+.img_respond {
+	width:100%;
+	height:auto;
+	}
+img {
+	vertical-align:top;
+}
+
+body { /*overflow:hidden;*/}
+#wrapper {
+	position: relative;
+	min-width: 1100px;
+	min-height: 100%;
+	margin: 0 auto;
+}
+.pcHide { display:none;}
+.spHide { display:block;}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+
+@media only screen and (max-width: 768px){
+img {
+	max-width:100%;
+}
+#wrapper {
+	min-width: inherit;
+}
+.pcHide { display:block;}
+.spHide { display:none;}
+
+a:hover {
+	filter:alpha(opacity=100);
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+}
+
+/*=============ヘッダー================*/
+
+header {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	min-width: 1100px;
+	background:rgba(0,0,0,0.85);
+	z-index:999;
+}
+header .inner {
+	width:1080px;
+	margin:0 auto;
+}
+header .leftBox {
+	float:left;
+	width:419px;
+}
+header .leftBox p {
+	padding:12px 0 0;
+	color:#ffffff;
+	font-size:84%;
+	white-space:nowrap
+}
+header .leftBox h1 {
+	padding:8px 0 17px;
+}
+header .rightBox {
+	float:right;
+}
+header .rightBox .gnav01 {
+	text-align:right;
+	letter-spacing:-0.4em;
+}
+header .rightBox .gnav01 li {
+	display:inline-block;
+	margin:0 13px 0 0;
+	padding:18px 0 0;
+	color:#ffffff;
+	font-weight:bold;
+	letter-spacing:0;
+}
+header .rightBox .gnav01 li a {
+	color:#ffffff;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+}
+header .rightBox .gnav01 li.nav01 a {
+	margin:0 24px 0 0;
+	padding:0 0 0 14px;
+	background:url(../../img/front/ico_arrow_01.png) no-repeat left top;
+}
+header .rightBox .gnav01 li.nav02 a {
+	margin:0 26px 0 0;
+	padding:0 0 0 14px;
+	background:url(../../img/front/ico_arrow_01.png) no-repeat left top;
+}
+header .rightBox .gnav02 {
+	text-align:right;
+	letter-spacing:-0.4em;
+}
+header .rightBox .gnav02 li {
+	display:inline-block;
+	margin:26px 0 0;
+	text-align:center;
+	letter-spacing:0;
+	background:url(../../img/front/header_bg_01.png) no-repeat left center;
+}
+header .rightBox .gnav02 li a {
+	display:inline-block;
+	width:126px;
+	color:#ffffff;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:117%;
+	font-weight:bold;
+}
+.eng_page header .rightBox .gnav02 li a {
+	line-height:258%;
+}
+
+
+/**
+ * kyoto
+ */
+
+.kyoto header .leftBox p {
+	padding: 14px 0 0;
+	font-size: 1rem;
+}
+
+.kyoto header .rightBox .gnav01 li.nav01  {
+	margin:0 2px 0 0;
+}
+
+.kyoto header .rightBox .gnav01 li.nav01 a {
+	font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+	background:none;
+	font-weight: normal;
+	font-size: 14px;
+}
+.kyoto header .rightBox .gnav01 li.nav03 a {
+	font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+.kyoto header .rightBox .gnav02 li a,
+.kyoto header .rightBox .gnav02 li a span {
+	line-height: 1.5;
+	width:90px;
+	font-size:14px;
+	font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+}
+.kyoto header .rightBox .gnav02 li {
+	margin:10px 0 0;
+}
+
+.kyoto header {
+	background: #000;
+}
+
+.kyoto header .rightBox .gnav02 li a span {
+	font-size:90%;
+}
+
+.kyoto header .inner {
+	margin: 0 auto 15px;
+}
+
+.kyoto header .leftBox {
+	width: 320px;
+}
+
+.kyoto header .leftBox h1 {
+	padding: 5px 0 0;
+}
+
+.kyoto header .rightBox .gnav02 li.nav07,
+.kyoto header .rightBox .gnav02 li.nav07 a,
+.kyoto header .rightBox .gnav02 li.nav07 a span {
+	width: 130px;
+}
+
+.kyoto header .rightBox .gnav02 li.nav07 {
+	padding: 0;
+	border-radius: 5px;
+}
+.kyoto header .rightBox .gnav02 li.nav07 a {
+	padding: 6px 2.5px;
+}
+
+
+header .rightBox .gnav02 li.nav07 {
+	padding:0 0 0 6px;
+}
+
+.eng_page header .rightBox .gnav02 li a {
+	line-height:258%;
+}
+header .rightBox .gnav02 li a span {
+	display:block;
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic',Arial, sans-serif;
+	font-size:79%;
+	font-weight:normal;
+}
+.kyoto header .rightBox .gnav02 li a span {
+	font-size: 0.8rem;
+}
+header .rightBox .gnav02 li.nav07 {
+	padding:0 0 0 6px;
+}
+header .rightBox .gnav02 li.nav07 a {
+	padding:3px 2.5px;
+	border-radius:3px;
+}
+.akihabara header .rightBox .gnav02 li.nav07 a {	background:#b23442;}/* akihabara */
+.nihonbashi-east header .rightBox .gnav02 li.nav07 a {	background:#244776;}/* nihonbashi-east */
+.kyoto header .rightBox .gnav02 li.nav07 a {	background:#5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+header {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	min-width: inherit;
+	background:rgba(0,0,0,0.80);
+	z-index:999;
+}
+header .inner {
+	width:100%;
+	margin:3% auto 3.28%;
+}
+header .leftBox {
+	float:left;
+	width:63%;
+}
+header .leftBox h1 {
+	padding:0 0 0 4.13%;
+}
+header .rightBox {
+	float:right;
+	width:37%;
+}
+header .rightBox .spReserve {
+	display:inline-block;
+	width:40.15%;
+	margin:0 9% 0 14%;
+}
+header .rightBox .spMenu {
+	display:inline-block;
+	width:17%;
+	margin:0 15.8% 0 0;
+}
+header .spGnav {
+	display:none;
+	position:absolute;
+	top:125%;
+	left:1.95%;
+	width:96.1%;
+	margin:0 auto;
+	padding:7.3% 0 14%;
+	background:rgba(0,0,0,0.70);
+	z-index:999;
+}
+header .spGnav li {
+	margin:0 0 2% 7.65%;
+}
+header .spGnav li a {
+	color:#ffffff;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	line-height:120%;
+}
+header .spGnav li.nav04 {
+	margin:0 0 4.5% 7.65%;
+}
+header .spGnav li.nav05 {
+	margin:0 0 9% 7.65%;
+	line-height:100%;
+}
+header .spGnav li.nav05 a {
+	font-size:84%;
+	font-weight:normal;
+	text-decoration:underline;
+}
+header .spGnav li.nav06 ,
+header .spGnav li.nav07 {
+	display:inline-block;
+	margin:0 0 8% 7.65%;
+}
+header .spGnav li.nav06 a ,
+header .spGnav li.nav07 a {
+	padding:0 0 0 12px;
+	font-size:84%;
+	background:url(../../img/front/ico_arrow_01.png) no-repeat left center;
+	background-size:6px 10px;
+}
+header .spGnav li.nav08 {
+	color:#ffffff;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:84%;
+	font-weight:bold;
+	line-height:120%;
+}
+header .spGnav li a span {
+	display:block;
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic',Arial, sans-serif;
+	font-size:84%;
+	font-weight:normal;
+}
+}
+
+/*=============フッター================*/
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.akihabara footer {	border-bottom: 11px solid #b23442;}/* akihabara */
+.nihonbashi-east footer {	border-bottom: 11px solid #244776;}/* nihonbashi-east */
+.kyoto footer {	border-bottom: 11px solid #5E6B4A;}/* kyoto */
+footer .inner {
+	width:940px;
+	margin:0 auto;
+}
+footer .ftLink {
+	padding: 6px 0;
+	overflow: hidden;
+}
+footer .ftLink .leftLink {
+	float: left;
+}
+footer .ftLink .leftLink a {
+	color: #c66;
+	text-decoration: underline;
+	opacity: 1;
+}
+footer .ftLink .leftLink a:hover {
+	text-decoration: none;
+}
+footer .ftLink .rightLink {
+	float: right;
+}
+footer .ftLink .rightLink a {
+	padding: 0 0 0 12px;
+	background: url(../../img/front/ico_arrow_02.png) no-repeat left center;
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+footer .ftLink .rightLink a:hover {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+footer {
+	position: static;
+}
+footer .inner {
+	width: auto;
+	margin: 0 3%;
+}
+footer .ftLink {
+	padding: 3% 0;
+	font-size: 83.3%;
+}
+footer .ftLink .leftLink {
+	float: none;
+	margin: 0 0 2%;
+}
+footer .ftLink .rightLink {
+	float: none;
+}
+}
+
+/*=============コンテンツ================*/
+
+/*----- 共通 -----*/
+
+#contents {
+	padding: 113px 0 41px;
+}
+#contents .inner {
+	width: 940px;
+	margin: 0 auto;
+}
+#contents h2 {
+	position: relative;
+  padding: 12px 180px 11px 18px;
+	/*padding: 12px 18px 11px;*/
+	border-top: 1px solid #ccc;
+	border-bottom: 1px dotted #bcbcbc;
+	line-height: 1.5;
+	font-size: 200%;
+}
+#contents h2 .small {
+	padding: 0 0 0 1em;
+	font-size: 75%;
+}
+#contents h2 .ttlbtn {
+ position: absolute;
+ top: 50%;
+ right: 12px;
+ margin: -18px 0 0;
+}
+#contents h2 .ttlbtn a {
+ display: block;
+ padding: 0 18px 0 15px;
+ border-radius: 2px;
+ background: #dadada;
+ line-height: 35px;
+ font-size: 14px;
+}
+.akihabara #contents h2 .ttlbtn a {/* akihabara */
+ color: #b23442;
+}
+.nihonbashi-east #contents h2 .ttlbtn a {/* nihonbashi-east */
+ color: #244776;
+}
+.kyoto #contents h2 .ttlbtn a {/* kyoto */
+ color: #5E6B4A;
+}
+
+#contents h2 .ttlbtn a span {
+ padding: 0 0 0 14px;
+}
+.akihabara #contents h2 .ttlbtn a span {/* akihabara */
+ background: url(../../img/front/ico_ttlbtn01.png) no-repeat left center;
+}
+.nihonbashi-east #contents h2 .ttlbtn a span {/* nihonbashi-east */
+ background: url(../../img/front/ico_ttlbtn02.png) no-repeat left center;
+}
+.kyoto #contents h2 .ttlbtn a span {/* akihabara */
+ background: url(../../img/front/ico_ttlbtn01.png) no-repeat left center;
+}
+#contents h3 {
+	padding: 10px 12px 9px;
+	background: #eee;
+	font-size: 116.7%;
+}
+
+@media only screen and (max-width: 768px){
+#contents {
+	padding: 52px 0 0;
+}
+#contents .inner {
+	width: auto;
+	margin: 0 3%;
+}
+#contents h2 {
+	/*padding: 7px 7px 6px;*/
+	padding: 7px 120px 6px 7px;
+
+	font-size: 133.3%;
+}
+#contents h2 .ttlbtn {
+ right: 6px;
+ margin: -13px 0 0;
+}
+#contents h2 .ttlbtn a {
+ padding: 0 9px 0 8px;
+ line-height: 25px;
+ font-size: 12px;
+}
+#contents h2 .ttlbtn a span {
+ padding: 0 0 0 7px;
+}
+.akihabara #contents h2 .ttlbtn a span {
+ background-size: 4px;
+}
+#contents h3 {
+	padding: 9px 8px;
+	font-size: 100%;
+}
+}
+
+/*----- アカウント状態 -----*/
+
+#contents .accountBox {
+	padding: 15px 0 38px;
+}
+#contents .accountBox ul {
+	float: right;
+	display: table;
+}
+#contents .accountBox ul li {
+	display: table-cell;
+	padding: 0 0 0 12px;
+	border-left: 1px solid #ccc;
+	line-height: 1.2;
+}
+#contents .accountBox ul li.loginId {
+	padding: 0 12px 0 0;
+	border-left: none;
+}
+#contents .accountBox ul li a {
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .accountBox ul li a:hover {
+	text-decoration: none;
+}
+#contents input[type="button"]:hover ,
+#contents input[type="submit"]:hover {
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+#contents .accountBox {
+	padding: 4.5% 0;
+}
+#contents .accountBox ul {
+	float: none;
+	font-size: 83.3%;
+}
+#contents .accountBox ul li {
+	padding: 0 0 0 6px;
+}
+#contents .accountBox ul li.loginId {
+	padding: 0 6px 0 0;
+}
+}
+
+/*----- 客室検索 -----*/
+
+#contents .searchBox {
+	margin: 0 0 44px;
+	padding: 32px 80px 27px;
+	border-top: 4px solid #666;
+	background: #f5f5f5;
+}
+#contents .searchBox dl {
+	margin: 0 0 18px;
+	font-size: 108.3%;
+	letter-spacing: -0.5em;
+}
+#contents .searchBox .search02 {
+	float: left;
+	width: 375px;
+}
+#contents .searchBox .search03 {
+	float: left;
+	width: 255px;
+}
+#contents .searchBox .search04 {
+	float: left;
+}
+#contents .searchBox .search05 {
+	clear: both;
+}
+#contents .searchBox dl dt ,
+#contents .searchBox dl dd {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 0;
+}
+#contents .searchBox dl dt {
+	width: 143px;
+}
+#contents .searchBox .search03 dt {
+	width: 65px;
+}
+#contents .searchBox .search04 dt {
+	width: 65px;
+}
+#contents .searchBox dl dd input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+#contents .searchBox .search01 dd input[type="text"] {
+	width: 185px;
+	padding: 1px 4px;
+}
+#contents .searchBox .search01 dd input[type="text"] + label {
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	margin: 0 0 0 -1px;
+	border: 1px solid #ccc;
+	background: url(../../img/front/ico_calendar_01.png) no-repeat center center #fff;
+	background-size: 14px;
+	vertical-align: top;
+}
+#contents .searchBox .search01 dd input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin: 0 4px 2px 10px;
+	vertical-align: middle;
+}
+#contents .searchBox .search01 dd select {
+	width: 50px;
+	box-sizing: border-box;
+	margin: 0 8px 0 36px;
+	border: 1px solid #ccc;
+}
+#contents .searchBox .search02 dd select {
+	width: 50px;
+	box-sizing: border-box;
+	margin: 0 8px 0 15px;
+	border: 1px solid #ccc;
+}
+#contents .searchBox .search03 dd input[type="radio"] {
+	width: 14px;
+	height: 14px;
+	margin: 4px 4px 4px 0;
+	vertical-align: middle;
+}
+#contents .searchBox .search03 dd label {
+	margin: 0 16px 0 0;
+}
+#contents .searchBox .search04 dd select {
+	width: 50px;
+	box-sizing: border-box;
+	margin: 0 8px 0 0;
+	border: 1px solid #ccc;
+}
+#contents .searchBox .search05 dd select {
+	width: 86px;
+	box-sizing: border-box;
+	margin: 0 2px;
+	border: 1px solid #ccc;
+}
+#contents .searchBox .search05 dd select:first-child {
+	margin: 0 2px 0 0;
+}
+#contents .searchBox .btn {
+	text-align: center;
+}
+#contents .searchBox .btn input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 172px;
+	height: 42px;
+	margin: 0;
+	border: none;
+	border-radius: 2px;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	vertical-align: top;
+}
+.akihabara #contents .searchBox .btn input {	background: #b23442;}/* akihabara */
+.nihonbashi-east #contents .searchBox .btn input {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .searchBox .btn input {	background: #5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+#contents .searchBox {
+	margin: 0 0 10%;
+	padding: 14px 3% 33px;
+}
+#contents .searchBox dl {
+	margin: 0 0 32px;
+}
+#contents .searchBox .search02 {
+	width: auto;
+	margin: 0 30px 32px 0;
+	margin: 0 15px 32px 0;
+}
+#contents .searchBox .search03 {
+	width: auto;
+	margin: 0 0 32px;
+}
+#contents .searchBox .search05 {
+	margin: 0 0 20px;
+}
+#contents .searchBox dl dt ,
+#contents .searchBox dl dd {
+	display: block;
+}
+#contents .searchBox dl dt {
+	width: auto;
+	margin: 0 0 12px;
+}
+#contents .searchBox .search03 dt {
+	width: auto;
+}
+#contents .searchBox .search04 dt {
+	width: auto;
+}
+#contents .searchBox .search01 dd input[type="text"] {
+	width: 100px;
+}
+#contents .searchBox .search01 dd input[type="checkbox"] {
+	margin: 0 2px 2px 4px;
+}
+#contents .searchBox .search01 dd select {
+	margin: 0 2px 0 4px;
+}
+#contents .searchBox .search02 dd select {
+	margin: 0 2px 0 4px;
+}
+#contents .searchBox .search03 dd label {
+	margin: 0 8px 0 0;
+}
+#contents .searchBox .search04 dd select {
+	margin: 0 2px 0 0;
+}
+#contents .searchBox .btn input {
+	width: 164px;
+	height: 38px;
+	font-size: 14px;
+}
+}
+
+/*----- 検索結果リスト -----*/
+
+#contents .searchList {
+	margin: 0 0 50px;
+	border-top: 2px solid #666;
+}
+#contents .searchList.secretList {
+	margin: 60px 0 50px;
+	border-top: none;
+}
+
+/*　並べ替え　*/
+
+#contents .searchList .sort {
+	position: relative;
+	margin: 7px 0 0;
+}
+#contents .searchList .sort ul {
+	float: right;
+	font-size: 108.3%;
+}
+#contents .searchList .sort ul li {
+	float: left;
+}
+#contents .searchList .sort ul li:first-child {
+	margin: 0 6px 0 0;
+}
+#contents .searchList .sort ul li a {
+	color: #333;
+}
+#contents .searchList .sort ul li.current a {
+	color: #369;
+}
+
+@media only screen and (max-width: 768px){
+#contents .searchList {
+	margin: 0 0 10.6%;
+}
+#contents .searchList.secretList {
+	margin: 4.5% 0 10.6%;
+}
+
+#contents .searchList .sort {
+	position: static;
+	margin: 2% 0 0;
+}
+#contents .searchList .sort ul {
+	font-size: 83.3%;
+}
+#contents .searchList .sort ul li:first-child {
+	margin: 0 3px 0 0;
+}
+}
+
+/* 件数 */
+
+#contents .searchList .results {
+	position: absolute;
+	top: 50px;
+	font-size: 116.7%;
+	color: #666;
+}
+#contents .searchList .results span {
+	padding: 0 6px 0 0;
+	font-size: 128.6%;
+	color: #369;
+}
+
+@media only screen and (max-width: 768px){
+#contents .searchList .results {
+	clear: both;
+	position: static;
+	top: auto;
+	margin: 4% 0 0;
+	font-size: 100%;
+}
+#contents .searchList .results span {
+	padding: 0 3px 0 0;
+	font-size: 116.7%;
+}
+}
+
+/* ページャー */
+
+#contents .searchList .pager {
+	margin: 12px 0 20px;
+}
+#contents .searchList .pager ul {
+	float: right;
+	text-align: center;
+	font-size: 11px;
+	letter-spacing: -0.5em;
+}
+#contents .searchList .pager ul li {
+	display: inline-block;
+	width: 20px;
+	margin: 0 3px;
+	vertical-align: middle;
+	letter-spacing: 0;
+}
+#contents .searchList .pager ul li a {
+	display: block;
+	padding: 2px;
+	background: #eee;
+	color: #555;
+}
+#contents .searchList .pager ul li.current a {
+	background: #ccc;
+}
+
+@media only screen and (max-width: 768px){
+#contents .searchList .pager {
+	margin: 8% 0 10.6%;
+}
+#contents .searchList .pager ul {
+	float: none;
+}
+}
+
+/* 検索結果 */
+
+#contents .roomList .roomBox {
+	margin: 0 0 68px;
+}
+#contents .roomList .roomBox:last-child {
+	margin: 0 0 32px;
+}
+#contents .roomBox .roomTtl {
+	margin: 0 0 21px;
+	padding: 13px 12px;
+	background: #eee;
+}
+#contents .roomBox .roomTtl p {
+	padding: 0 0 0 8px;
+	line-height: 1.56;
+	font-size: 133.3%;
+}
+.akihabara #contents .roomBox .roomTtl p {	border-left: 4px solid #933;	color: #933;}/* akihabara */
+.nihonbashi-east #contents .roomBox .roomTtl p {	border-left: 4px solid #244776;	color: #244776;}/* akihabara */
+.kyoto #contents .roomBox .roomTtl p {	border-left: 4px solid #933;	color: #5E6B4A;}/* kyoto */
+#contents .roomBox .roomPrivilege {
+	margin: -5px 0 16px;
+	padding: 0 10px;
+}
+#contents .roomBox .roomPrivilege p {
+	line-height: 1.67;
+	font-weight: bold;
+	color: #933;
+}
+#contents .roomBox .roomPrivilege .ico {
+	display: inline-block;
+	margin: 0 1em 0 0;
+	padding: 0 5px;
+	border: 1px solid #b23442;
+	border-radius: 3px;
+	background: #f1cbcf;
+	line-height: 1.5;
+	font-weight: normal;
+}
+
+#contents .roomBox .roomImg {
+	float: left;
+	width: 300px;
+}
+#contents .roomBox .roomImg img {
+	max-width: 100%;
+}
+#contents .roomBox .roomImg p {
+	border: 1px solid #ddd;
+}
+#contents .roomBox .roomImg ul {
+	margin: 6px 0 0;
+}
+#contents .roomBox .roomImg ul li {
+	float: left;
+	width: 68px;
+	margin: 0 6px 3px 0;
+	border: 1px solid #ddd;
+	/*max-height: 42px;*/
+	/*overflow: hidden;*/
+}
+#contents .roomBox .roomImg ul li:nth-child(4n) {
+	margin: 0;
+}
+.roomFrame {
+	width: 657px;
+	padding: 70px 140px 120px;
+	background: #fff;
+}
+.roomFrame ul li {
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+.roomFrame .bx-prev {
+	position: absolute;
+	top: 50%;
+	left: 85px;
+	width: 0;
+	height: 0;
+	margin: -47px 0 0;
+	padding: 44px 24px 0 0;
+	background: url(../../img/front/bx_prev.png) no-repeat center center;
+	overflow: hidden;
+}
+.roomFrame .bx-next {
+	position: absolute;
+	top: 50%;
+	right: 85px;
+	width: 0;
+	height: 0;
+	margin: -47px 0 0;
+	padding: 44px 24px 0 0;
+	background: url(../../img/front/bx_next.png) no-repeat center center;
+	overflow: hidden;
+}
+.roomFrame .bx-pager {
+	position: absolute;
+	bottom: 76px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.roomFrame .bx-pager-item {
+	display: inline-block;
+	margin: 0 5px;
+}
+.roomFrame .bx-pager-item a {
+	display: block;
+	width: 0;
+	height: 0;
+	padding: 10px 10px 0 0;
+	border-radius: 50%;
+	background: #ccc;
+	overflow: hidden;
+}
+.roomFrame .bx-pager-item a.active {
+	background: #999;
+}
+#contents .roomBox .roomTxt {
+	margin: 0 0 0 314px;
+}
+#contents .roomBox .roomTxt .txt {
+	padding: 0 0 12px;
+	line-height: 1.67;
+	color: #444;
+}
+#contents .roomBox .roomTxt .tag {
+	padding: 11px 0 0;
+	border-top: 1px dotted #bcbcbc;
+	font-size: 10px;
+	letter-spacing: -0.5em;
+}
+#contents .roomBox .roomTxt .tag li {
+	display: inline-block;
+	margin: 0 12px 12px 0;
+	padding: 2px 4px;
+	border-radius: 2px;
+	vertical-align: top;
+	letter-spacing: 0;
+}
+.akihabara #contents .roomBox .roomTxt .tag li {	background: #f1cbcf;	color: #933;}/* akihabara */
+.nihonbashi-east #contents .roomBox .roomTxt .tag li {	background: #87ceeb;	color: #244776;}/* nihonbashi-east */
+.kyoto #contents .roomBox .roomTxt .tag li {	background: #f1cbcf;	color: #5E6B4A;}/* kyoto */
+#contents .roomBox .roomPlan {
+	margin: 0 0 0 314px;
+	padding: 16px 0 0;
+}
+#contents .roomBox .roomPlan table {
+	width: 100%;
+}
+#contents .roomBox .roomPlan table em {
+	color: #c00;
+}
+#contents .roomBox .roomPlan table .cancel {
+	text-decoration: line-through;
+}
+#contents .roomBox .roomPlan th ,
+#contents .roomBox .roomPlan td {
+	vertical-align: middle;
+}
+#contents .roomBox .roomPlan th.spHide ,
+#contents .roomBox .roomPlan td.spHide {
+	display: table-cell;
+}
+#contents .secretList .roomBox .roomPlan th.spHide {
+	font-size: 83.3%;
+}
+#contents .roomBox .roomPlan th.planPrice ,
+#contents .roomBox .roomPlan td.planPrice {
+	text-align: center;
+}
+#contents .roomBox .roomPlan td {
+	padding: 33px 8px 9px;
+	border-bottom: 1px dotted #bcbcbc;
+}
+#contents .secretList .roomBox .roomPlan td {
+	padding: 9px 8px;
+}
+#contents .roomBox .roomPlan td:first-child {
+	width: 50%;
+}
+#contents .secretList .roomBox .roomPlan td:first-child {
+	width: 45%;
+}
+#contents .roomBox .roomPlan tr:first-child th ,
+#contents .roomBox .roomPlan tr:first-child td {
+	padding: 0 0 7px;
+	border-bottom: none;
+}
+#contents .roomBox .roomPlan td:last-child {
+	font-weight: bold;
+}
+#contents .roomBox .roomPlan tr:first-child td:last-child {
+	font-weight: normal;
+}
+#contents .roomBox .roomPlan .planTtl {
+	line-height: 1.2;
+	font-size: 14px;
+	color: #444;
+}
+#contents .roomBox .roomPlan .planTtl span {
+	display: block;
+	padding: 0 0 0 8px;
+	border-left: 4px solid #444;
+}
+#contents .roomBox .roomPlan .noSmoking {
+	margin: -21px 0 3px;
+}
+#contents .roomBox .roomPlan .planName a {
+	font-weight: bold;
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .roomBox .roomPlan .planName a:hover {
+	text-decoration: none;
+}
+#contents .roomBox .roomPlan .btn {
+	width: 102px;
+	text-align: center;
+}
+#contents .secretList .roomBox .roomPlan .btn {
+	width: 82px;
+}
+#contents .roomBox .roomPlan .btn a {
+	display: block;
+	padding: 3px 0 2px;
+	border-radius: 2px;
+	font-size: 12px;
+	color: #fff;
+}
+.akihabara #contents .roomBox .roomPlan .btn a {	background: #b23442;}/* akihabara */
+.nihonbashi-east #contents .roomBox .roomPlan .btn a {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .roomBox .roomPlan .btn a {	background: #5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+#contents .roomList .roomBox {
+	margin: 0 0 13.3%;
+}
+#contents .roomList .roomBox:last-child {
+	margin: 0 0 6.7%;
+}
+#contents .roomBox .roomTtl {
+	margin: 0 0 2.8%;
+	padding: 9px 8px;
+}
+#contents .roomBox .roomTtl p {
+	font-size: 100%;
+}
+#contents .roomBox .roomPrivilege {
+	margin: 0 0 2.8%;
+}
+#contents .roomBox .roomImg {
+	float: left;
+	/*width: 45.6%;*/
+    width: auto;
+}
+#contents .roomBox .roomImg img {
+	vertical-align: bottom;
+}
+#contents .roomBox .roomImg ul {
+	margin: 3.4% 0 0;
+}
+#contents .roomBox .roomImg ul li {
+	width: 31%;
+	width: 22%;
+	margin: 0 3.5% 0 0;
+	margin: 0 3.8% 0 0;
+	box-sizing: border-box;
+}
+#contents .roomBox .roomImg ul li:last-child {
+	margin: 0;
+}
+.roomFrame {
+	width: 94%;
+	padding: 12% 3%;
+}
+.roomFrame .bx-prev {
+	left: 1.5%;
+	margin: -11px 0 0;
+	padding: 22px 12px 0 0;
+	background-size: contain;
+}
+.roomFrame .bx-next {
+	right: 1.5%;
+	margin: -11px 0 0;
+	padding: 22px 12px 0 0;
+	background-size: contain;
+}
+.roomFrame .bx-pager {
+	bottom: 4%;
+}
+#contents .roomBox .roomTxt {
+	margin: 0 0 0 48%;
+}
+#contents .roomBox .roomTxt .txt {
+	padding: 0;
+	font-size: 83.3%;
+}
+#contents .roomBox .roomPlan {
+	clear: both;
+	margin: 0;
+	padding: 6% 0 0;
+}
+#contents .roomBox .roomPlan th.spHide ,
+#contents .roomBox .roomPlan td.spHide {
+	display: none;
+}
+#contents .roomBox .roomPlan td {
+	padding: 3.3% 0 2.2%;
+	font-size: 83.3%;
+}
+#contents .roomBox .roomPlan tr:first-child th ,
+#contents .roomBox .roomPlan tr:first-child td {
+	padding: 0;
+}
+#contents .roomBox .roomPlan .planTtl {
+	font-size: 12px;
+}
+#contents .roomBox .roomPlan .planTtl span {
+	padding: 0 0 0 4px;
+}
+#contents .roomBox .roomPlan .noSmoking {
+	margin: 0 0 3px;
+}
+#contents .roomBox .roomPlan .btn {
+	width: 84px;
+	padding: 0 0 0 2%;
+}
+#contents .roomBox .roomPlan .btn a {
+	padding: 9px 0 8px;
+	font-size: 10px;
+}
+}
+
+/*----- 検索結果詳細 -----*/
+
+#contents .roomDetail {
+	margin: 0 0 80px;
+}
+#contents .roomDetail .roomTtl {
+	margin: 0 0 21px;
+	padding: 13px 12px;
+	background: #eee;
+}
+#contents .roomSection .roomTtl {
+	margin: 0;
+	padding: 10px 12px 9px;
+	background: #eee;
+}
+#contents .roomDetail .roomTtl p {
+	padding: 0 0 0 8px;
+	line-height: 1.56;
+	font-size: 133.3%;
+}
+.akihabara #contents .roomDetail .roomTtl p {	border-left: 4px solid #933;	color: #933;}/* akihabara */
+.nihonbashi-east #contents .roomDetail .roomTtl p {	border-left: 4px solid #244776;	color: #244776;}/* nihonbashi-east */
+.kyoto #contents .roomDetail .roomTtl p {	border-left: 4px solid #5E6B4A;	color: #5E6B4A;}/* kyoto */
+#contents .roomSection .roomTtl p {
+	padding: 0;
+	border-left: none !important;
+	font-size: 116.7%;
+	color: #333 !important;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomDetail {
+	margin: 0 0 5%;
+}
+#contents .roomDetail .roomTtl {
+	margin: 0 0 2.8%;
+	padding: 9px 8px;
+}
+#contents .roomSection .roomTtl {
+	margin: 0;
+	padding: 9px 8px;
+}
+#contents .roomDetail .roomTtl p {
+	font-size: 100%;
+}
+#contents .roomSection .roomTtl p {
+	font-size: 100%;
+}
+}
+
+/* イメージ画像 */
+
+#contents .roomDetail .roomImg {
+	float: right;
+	width: 408px;
+}
+#contents .roomDetail .roomImg img {
+	max-width: 100%;
+}
+#contents .roomDetail .roomImg .imgSlide {
+	border: 1px solid #ddd;
+}
+#contents .roomDetail .roomImg .imgThumb {
+	margin: 8px 0 0;
+}
+#contents .roomDetail .roomImg .imgThumb li {
+	float: left;
+	width: 91px;
+	margin: 0 12px 0 0;
+	border: 1px solid #ddd;
+}
+#contents .roomDetail .roomImg .imgThumb li:last-child {
+	margin: 0;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomDetail .roomImg {
+	float: none;
+	width: auto;
+}
+#contents .roomDetail .roomImg .imgThumb {
+	margin: 2.2% 0 0;
+}
+#contents .roomDetail .roomImg .imgThumb li {
+	width: 22.3%;
+	margin: 0 3.6% 0 0;
+	box-sizing: border-box;
+}
+#contents .roomDetail .roomImg .imgThumb li:last-child {
+	margin: 0;
+}
+}
+
+/* 概要 */
+
+#contents .roomDetail .roomData {
+	margin: 0 454px 0 0;
+}
+#contents .roomDetail .roomData .roomTable {
+	margin: 0 50px 0 0;
+}
+#contents .roomDetail .roomData .roomTable table {
+	width: 100%;
+}
+#contents .roomDetail .roomData .roomTable td {
+	width: 50%;
+	padding: 0 0 16px;
+	vertical-align: middle;
+}
+#contents .roomDetail .roomData .roomTable td span {
+	display: inline-block;
+	width: 86px;
+	margin: 0 6px 0 0;
+	padding: 1px 0;
+	background: #ddd;
+	text-align: center;
+}
+#contents .roomDetail .roomData .txt {
+	padding: 8px 0 0;
+	border-top: 1px solid #ccc;
+	line-height: 1.73;
+	font-size: 125%;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomDetail .roomData {
+	margin: 4.5% 0 0;
+}
+#contents .roomDetail .roomData .roomTable {
+	margin: 0;
+}
+#contents .roomDetail .roomData .roomTable td {
+	padding: 0 0 5%;
+}
+#contents .roomDetail .roomData .txt {
+	padding: 2% 0 0;
+	line-height: 1.33;
+	font-size: 100%;
+}
+}
+
+/* 詳細 */
+
+#contents .roomSpec {
+	margin: 47px 0 0;
+	padding: 37px 37px 0 34px;
+	border: 1px solid #ccc;
+}
+#contents .roomSpec dl {
+	margin: 0 0 47px;
+	line-height: 1.5;
+	color: #444;
+}
+#contents .roomSpec dl dt {
+	border-bottom: 1px solid #999;
+	overflow: hidden;
+}
+#contents .roomSpec dl dt > span {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 0 8px 4px;
+	padding: 0 0 0 12px;
+	line-height: 1.2;
+	font-size: 116.7%;
+	font-weight: bold;
+}
+#contents .roomSpec dl dt span:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	border-left: 4px solid #444;
+	content: "";
+}
+#contents .roomSpec dl dt span.note {
+	float: right;
+	margin: 2px 0 8px;
+	padding: 0;
+	border-left: none;
+	font-size: 100%;
+	font-weight: normal;
+}
+#contents .roomSpec dl dt span.note:before {
+	content: none;
+}
+#contents .roomSpec dl dd.total {
+	margin: 24px 0 0 20px;
+}
+#contents .roomSpec dl dd.total table {
+	width: 100%;
+}
+#contents .roomSpec dl dd.total table td {
+	vertical-align: top;
+}
+#contents .roomSpec dl dd.total table .price {
+	font-size: 133.3%;
+	font-weight: bold;
+}
+#contents .roomSpec dl dd.total table .price .price01 {
+	padding: 0 0 0 0.5em;
+	font-size: 137.5%;
+	font-weight: bold;
+}
+.akihabara #contents .roomSpec dl dd.total table .price .price01 {	color: #c33;}/* akihabara */
+.nihonbashi #contents .roomSpec dl dd.total table .price .price01 {	color: #c33;}/* nihonbashi */
+.kyoto #contents .roomSpec dl dd.total table .price .price01 {	color: #c33;}/* akihabara */
+#contents .roomSpec dl dd.total table .price .price02 {
+	font-size: 81.3%;
+	font-weight: bold;
+}
+#contents .roomSpec dl dd.total table .btn {
+	width: 242px;
+	text-align: center;
+}
+#contents .roomSpec dl dd.total table .btn a {
+	display: block;
+	padding: 10px 0 9px;
+	border-radius: 2px;
+	font-size: 22px;
+	color: #fff;
+}
+.akihabara #contents .roomSpec dl dd.total table .btn a {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .roomSpec dl dd.total table .btn a {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .roomSpec dl dd.total table .btn a {	background: #5E6B4A;}/* kyoto */
+#contents .roomSpec dl dd.spec table {
+	width: 100%;
+}
+#contents .roomSpec dl dd.spec table td {
+	padding: 18px 25px 17px;
+	border: 1px solid #ccc;
+	border-top: none;
+	vertical-align: middle;
+}
+#contents .roomSpec dl dd.spec table td:first-child {
+	width: 112px;
+	border-left: none;
+}
+#contents .roomSpec dl dd.spec table td:last-child {
+	border-right: none;
+}
+#contents .roomSpec dl dd.spec .note {
+	margin: 3px 0 0;
+	text-align: right;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomSpec {
+	margin: 7% 0 0;
+	padding: 2.7% 2.7% 0;
+}
+#contents .roomSpec dl {
+	margin: 0 0 10.6%;
+}
+#contents .roomSpec dl dt span {
+	font-size: 83.3%;
+}
+#contents .roomSpec dl dt span:before {
+	height: 12px;
+}
+#contents .roomSpec dl dt span.note {
+	font-size: 83.3%;
+}
+#contents .roomSpec dl dd.total {
+	margin: 3.5% 0 0;
+}
+#contents .roomSpec dl dd.total table {
+	width: 100%;
+}
+#contents .roomSpec dl dd.total table td {
+	display: block;
+}
+#contents .roomSpec dl dd.total table .price {
+	font-size: 100%;
+}
+#contents .roomSpec dl dd.total table .price .price01 {
+	font-size: 150%;
+}
+#contents .roomSpec dl dd.total table .price .price02 {
+	font-size: 100%;
+}
+#contents .roomSpec dl dd.total table .btn {
+	width: 218px;
+	margin: 5.3% auto 0;
+}
+#contents .roomSpec dl dd.total table .btn a {
+	padding: 9px 0 8px;
+	font-size: 14px;
+}
+#contents .roomSpec dl dd.spec table td {
+	padding: 3.7% 2.8%;
+	font-size: 83.3%;
+}
+#contents .roomSpec dl dd.spec table td:first-child {
+	width: 34.4%;
+}
+#contents .roomSpec dl dd.spec .note {
+	margin: 2.8% 2.8% 0;
+	text-align: left;
+}
+}
+
+#contents .roomSection {
+	margin: 58px 0 0;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomSection {
+	margin: 10% 0 0;
+}
+}
+
+/* プラン詳細 */
+
+#contents .roomSection .roomOutline {
+	margin: 26px 12px 80px;
+	line-height: 1.86;
+	font-size: 116.7%;
+}
+@media only screen and (max-width: 768px){
+#contents .roomSection .roomOutline {
+	margin: 4.5% 0 0;
+	line-height: 1.6;
+	font-size: 83.3%;
+}
+}
+
+/* 料金・空室状況 */
+
+#contents .roomSection .roomSituation {
+	margin: 26px 100px 74px;
+}
+#contents .roomSection .roomSituation .note {
+	line-height: 1.86;
+	font-size: 116.7%;
+	color: #c66;
+}
+#contents .roomSection .roomSearch dl {
+	float: left;
+	width: 248px;
+	margin: 18px 0 2px;
+	font-size: 108.3%;
+	letter-spacing: -0.5em;
+}
+#contents .roomSection .roomSearch dl dt ,
+#contents .roomSection .roomSearch dl dd {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 0;
+}
+#contents .roomSection .roomSearch dl dt {
+	width: 91px;
+}
+#contents .roomSection .roomSearch dl dd select {
+	width: 50px;
+	box-sizing: border-box;
+	margin: 0 8px 0 0;
+	border: 1px solid #ccc;
+}
+#contents .roomSection .roomSearch .btn {
+	float: right;
+	text-align: center;
+}
+#contents .roomSection .roomSearch .btn input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 242px;
+	height: 42px;
+	margin: 0;
+	border: none;
+	border-radius: 2px;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	vertical-align: top;
+}
+.akihabara #contents .roomSection .roomSearch .btn input {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .roomSection .roomSearch .btn input {	background: #244776;}/* nihonbaxhi-east */
+.kyoto #contents .roomSection .roomSearch .btn input {	background: #5E6B4A;}/* kyoto */
+#contents .roomSection .monthPager {
+	margin: 23px 0 0;
+	padding: 0 20px;
+	background: #eee;
+	color: #444;
+}
+#contents .roomSection .monthPager table {
+	width: 100%;
+	text-align: center;
+}
+#contents .roomSection .monthPager table td {
+	padding: 10px 0 9px;
+	vertical-align: middle;
+	font-size: 116.7%;
+}
+#contents .roomSection .monthPager table .prev {
+	text-align: left;
+	font-size: 100%;
+}
+#contents .roomSection .monthPager table .next {
+	text-align: right;
+	font-size: 100%;
+}
+#contents .roomSection .monthPager table td a {
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .roomSection .monthPager table td a:hover {
+	text-decoration: none;
+}
+#contents .roomSection .monthPager table .prev a {
+	padding: 0 0 0 12px;
+	background: url(../../img/front/ico_arrow_03_prev.png) no-repeat left center;
+}
+#contents .roomSection .monthPager table .next a {
+	padding: 0 12px 0 0;
+	background: url(../../img/front/ico_arrow_03_next.png) no-repeat right center;
+}
+#contents .roomSection .monthCalendar {
+	margin: 10px 0 0;
+	color: #444;
+}
+#contents .roomSection .monthCalendar table {
+	width: 100%;
+}
+#contents .roomSection .monthCalendar table th ,
+#contents .roomSection .monthCalendar table td {
+	width: 14.2857%;
+	border: 1px solid #ccc;
+	vertical-align: top;
+	text-align: center;
+}
+#contents .roomSection .monthCalendar table th {
+	padding: 2px;
+}
+#contents .roomSection .monthCalendar table td {
+	background: #fff;
+}
+#contents .roomSection .monthCalendar table td.bg01 {
+	background: #999;
+}
+#contents .roomSection .monthCalendar table td.gray {
+	background: #f5f5f5;
+}
+#contents .roomSection .monthCalendar table td.red {
+	background: #fcc;
+}
+#contents .roomSection .monthCalendar table td.blue {
+    background: #bfddfb;
+}
+#contents .roomSection .monthCalendar table td.bg02 {
+    background: #ffff00;
+}
+#contents .roomSection .monthCalendar table td a {
+	display: block;
+	color: #444;
+}
+#contents .roomSection .monthCalendar table td span {
+	display: block;
+}
+#contents .roomSection .monthCalendar table td .day {
+	margin: 7px 0 0;
+}
+#contents .roomSection .monthCalendar table td a .day {
+	color: #369;
+	text-decoration: underline;
+}
+#contents .roomSection .monthCalendar table td .price {
+	margin: 17px 0 0;
+}
+#contents .roomSection .monthCalendar table td a .price {
+	text-decoration: underline;
+}
+#contents .roomSection .monthCalendar table td .price em {
+	display: block;
+	font-size: 83.3%;
+}
+#contents .roomSection .monthCalendar table td .mark {
+	margin: 4px 0 0;
+	border-top: 1px dotted #d3d3d3;
+	line-height: 1.33;
+}
+#contents .roomSection .monthCalendar .txt {
+	margin: 14px 0 0;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomSection .roomSituation {
+	margin: 4.5% 0 0;
+}
+#contents .roomSection .roomSearch dl {
+	float: none;
+	width: auto;
+	margin: 0 0 4.3%;
+	font-size: 100%;
+}
+#contents .roomSection .roomSearch dl dt {
+	width: 60px;
+	font-weight: bold;
+}
+#contents .roomSection .roomSearch dl dd select {
+	width: 50px;
+	box-sizing: border-box;
+	margin: 0 8px 0 0;
+	border: 1px solid #ccc;
+}
+#contents .roomSection .roomSearch .btn {
+	float: none;
+	margin: 0 0 4.3%;
+}
+#contents .roomSection .roomSearch .btn input {
+	width: 218px;
+	height: 38px;
+	font-size: 14px;
+}
+#contents .roomSection .roomSearch dl dd input {
+	width: 156px;
+	box-sizing: border-box;
+	padding: 1px 4px;
+	border: 1px solid #ccc;
+}
+#contents .roomSection .roomSearch dl dd input + label {
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	margin: 0 0 0 -1px;
+	border: 1px solid #ccc;
+	background: url(../../img/front/ico_calendar_01.png) no-repeat center center #fff;
+	background-size: 14px;
+	vertical-align: top;
+}
+#contents .roomSection .roomSearch .txt01 {
+	margin: 0 0 1%;
+}
+#contents .roomSection .roomSearch .txt01 span {
+	padding: 0 0.5em 0 1em;
+	color: #c33;
+}
+#contents .roomSection .roomSearch .txt02 a {
+	padding: 0 0 0 12px;
+	background: url(../../img/front/ico_arrow_03_next.png) no-repeat left center;
+	color: #369;
+	opacity: 1;
+}
+#contents .roomSection .monthCalendar {
+	padding: 0;
+	overflow-x: scroll;
+}
+#contents .roomSection .monthCalendar table {
+	width: 600px;
+}
+#contents .roomSection .monthCalendar table td .day {
+	margin: 3px 0 0;
+}
+#contents .roomSection .monthCalendar table td .price {
+	margin: 8px 0 0;
+}
+#contents .roomSection .monthCalendar table td .mark {
+	margin: 2px 0 0;
+}
+#contents .roomSection .monthCalendar .txt {
+	width: 600px;
+	margin: 14px 0 28px;
+}
+}
+
+/* その他のプラン */
+
+#contents .roomSection .roomPlan table {
+	width: 100%;
+}
+#contents .roomSection .roomPlan th ,
+#contents .roomSection .roomPlan td {
+	display: table-cell !important;
+	vertical-align: middle;
+}
+#contents .roomSection .roomPlan th.planPrice ,
+#contents .roomSection .roomPlan td.planPrice {
+	text-align: center;
+}
+#contents .roomSection .roomPlan td {
+	padding: 42px 12px 18px;
+	border-bottom: 1px solid #ccc;
+}
+#contents .roomSection .roomPlan td:first-child {
+	width: 50%;
+	padding: 42px 16px 18px;
+}
+#contents .roomSection .roomPlan td:nth-child(2) {
+	width: 96px;
+}
+#contents .roomSection .roomPlan td:last-child {
+	text-align: left;
+	font-weight: bold;
+}
+#contents .roomSection .roomPlan .noSmoking {
+	margin: -21px 0 3px;
+}
+#contents .roomSection .roomPlan .planName a {
+	font-weight: bold;
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .roomSection .roomPlan .planName a:hover {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+#contents .roomSection .roomPlan td.spHide {
+	display: none !important;
+}
+#contents .roomSection .roomPlan td {
+	padding: 4.4% 0 3.3%;
+	border-bottom: 1px dotted #bcbcbc;
+	font-size: 83.3%;
+}
+#contents .roomSection .roomPlan td:first-child {
+	width: auto;
+	padding: 4.4% 0 3.3%;
+}
+#contents .roomSection .roomPlan .noSmoking {
+	margin: 0 0 3px;
+}
+}
+
+/*----- ログイン -----*/
+
+#contents .loginBox {
+	margin: 70px 16px 0;
+}
+#contents .loginBox .inputBox {
+	float: left;
+	width: 320px;
+	margin: 0 30px;
+	padding: 11px 37px 41px;
+	background: #eee;
+}
+#contents .loginBox.clearfix .inputBox {
+	float: left;
+	margin: 0 30px;
+}
+#contents .loginBox .inputBox h3 {
+	padding: 30px 0 29px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	line-height: 1.33;
+	font-size: 18px;
+}
+#contents .loginBox .inputBox h3.col2 {
+	padding: 18px 0;
+}
+#contents .loginBox .inputBox .inputForm {
+	position: relative;
+	margin: 30px 0 20px 10px;
+	padding: 0 0 18px;
+}
+#contents .loginBox .inputBox .inputForm dl {
+	margin: 0 0 16px;
+	letter-spacing: -0.5em;
+	font-size: 116.7%;
+	color: #444;
+}
+#contents .loginBox .inputBox .inputForm dt ,
+#contents .loginBox .inputBox .inputForm dd {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 0;
+}
+#contents .loginBox .inputBox .inputForm dt {
+	width: 112px;
+}
+#contents .loginBox .inputBox .inputForm dd input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 190px;
+	padding: 2px 4px;
+	border: 1px solid #ccc;
+	-moz-box-shadow: inset 1px 1px 2px #ccc;
+	-webkit-box-shadow: inset 1px 1px 2px #ccc;
+	box-shadow: inset 1px 1px 2px #ccc;
+}
+#contents .loginBox .inputBox .inputForm .note {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #444;
+}
+#contents .loginBox .inputBox .inputForm .note a {
+	color: #444;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .loginBox .inputBox .inputForm .note a:hover {
+	text-decoration: none;
+}
+#contents .loginBox .inputBox .btn {
+	text-align: center;
+}
+#contents .loginBox .inputBox .btn input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 126px;
+	height: 39px;
+	padding: 0 10px;
+	border: none;
+	border-radius: 2px;
+	font-size: 13px;
+	color: #fff;
+	vertical-align: top;
+}
+.akihabara #contents .loginBox .inputBox .btn input {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .loginBox .inputBox .btn input {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .loginBox .inputBox .btn input {	background: #5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+#contents .loginBox {
+	margin: 5.8% 5.8% 38%;
+}
+#contents .loginBox .inputBox {
+	float: none;
+	width: auto;
+	margin: 0 0 5.7%;
+	padding: 1.5% 4.7% 5.6%;
+	background: #eee;
+}
+#contents .loginBox .inputBox h3 {
+	padding: 15px 0 14px;
+	font-size: 12px;
+}
+#contents .loginBox .inputBox h3.col2 {
+	padding: 7px 0;
+}
+#contents .loginBox .inputBox .inputForm {
+	position: relative;
+	margin: 4.6% 0 4.2%;
+	padding: 0 0 15px;
+}
+#contents .loginBox .inputBox .inputForm dl {
+	width: 240px;
+	margin: 0 auto 5%;
+	font-size: 100%;
+}
+#contents .loginBox .inputBox .inputForm dt {
+	width: 96px;
+}
+#contents .loginBox .inputBox .inputForm dd input {
+	width: 144px;
+}
+#contents .loginBox .inputBox .inputForm .note {
+	font-size: 83.3%;
+}
+}
+
+/*----- 宿泊予約 -----*/
+
+#contents .reserveBox {
+	margin: 80px 100px 0;
+}
+#contents .reserveBox:last-child {
+	margin: 80px 100px;
+}
+
+@media only screen and (max-width: 768px){
+#contents .reserveBox {
+	margin: 6% 0 0;
+}
+#contents .reserveBox:last-child {
+	margin: 6% 0;
+}
+}
+
+/* ステップ */
+
+#contents .reserveBox .formStep {
+	margin: 0 4px 40px;
+	text-align: center;
+	font-size: 12px;
+}
+#contents .reserveBox.finish .formStep {
+	margin: 0 4px 80px;
+}
+#contents .reserveBox .formStep li {
+	position: relative;
+	float: left;
+	width: 244px;
+	box-sizing: border-box;
+	margin: 1px 0;
+	padding: 0 32px 0 0;
+	color: #fff;
+}
+#contents .reserveBox .formStep li.current {
+	margin: 0;
+	color: #333;
+}
+#contents .reserveBox .formStep li:after {
+	position: absolute;
+	top: 0;
+	right: 12px;
+	width: 22px;
+	height: 43px;
+	background: url(../../img/front/bg_formStep01.png) no-repeat left center;
+	background-size: contain;
+	content: "";
+}
+#contents .reserveBox .formStep li.current:after {
+	height: 45px;
+	background: url(../../img/front/bg_formStep01_current.png) no-repeat left center;
+	background-size: contain;
+}
+#contents .reserveBox .formStep li span {
+	display: block;
+	height: 41px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	background: #666;
+	line-height: 41px;
+	overflow: hidden;
+}
+#contents .reserveBox .formStep li.current span {
+	border: 2px solid #ccc;
+	background: #fff;
+}
+#contents .reserveBox .formStep li br {
+	display: none;
+}
+
+@media only screen and (max-width: 768px){
+#contents .reserveBox .formStep {
+	margin: 0 0 6%;
+	font-size: 9px;
+}
+#contents .reserveBox.finish .formStep {
+	margin: 0 0 8%;
+}
+#contents .reserveBox .formStep li {
+	width: 33.33%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 16px 0 0;
+}
+#contents .reserveBox .formStep li:after {
+	position: absolute;
+	top: 0;
+	right: 4px;
+	width: 14px;
+	height: 28px;
+}
+#contents .reserveBox .formStep li.current:after {
+	height: 28px;
+}
+#contents .reserveBox .formStep li span {
+	height: 26px;
+	line-height: 13px;
+}
+#contents .reserveBox .formStep li.current span {
+	border: 1px solid #ccc;
+}
+#contents .reserveBox .formStep li br {
+	display: inline;
+}
+}
+
+#contents .reserveBox .lead {
+	margin: 0 0 40px;
+}
+#contents .reserveBox.finish .lead {
+	margin: 0 0 20px;
+	text-align: center;
+	font-size: 133.3%;
+}
+#contents .reserveBox span.required {
+	display: inline-block;
+	width: 26px;
+	margin: 0 3px 0 0;
+	padding: 0 !important;
+	text-align: center;
+	line-height: 1.4;
+	font-size: 10px;
+	color: #fff;
+}
+.akihabara #contents .reserveBox span.required {	background: #c66;}/* akihabara */
+.nihonbashi-east #contents .reserveBox span.required {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .reserveBox span.required {	background: #5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+#contents .reserveBox .lead {
+	margin: 0 0 6%;
+	font-size: 83.3%;
+}
+#contents .reserveBox.finish .lead {
+	text-align: left;
+	font-size: 100%;
+}
+}
+
+/* 入力エリア */
+
+#contents .reserveBox .inputBox dl {
+	margin: 0 0 35px;
+}
+#contents .reserveBox .inputBox dl dt {
+	overflow: hidden;
+}
+#contents .reserveBox.finish .inputBox dl dt {
+	margin: 0 0 20px;
+}
+#contents .reserveBox .inputBox dl dt > span {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 6px 0 6px 4px;
+	padding: 0 0 0 12px;
+	line-height: 1.2;
+	font-size: 116.7%;
+}
+#contents .reserveBox.finish .inputBox dl dt span {
+	font-weight: bold;
+}
+#contents .reserveBox.finish .inputBox dl dt span span {
+	font-size: 85.7%;
+}
+#contents .reserveBox .inputBox dl dt span:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	border-left: 4px solid #444;
+	content: "";
+}
+#contents .reserveBox .inputBox dl dt span.note {
+	float: right;
+	margin: 8px 0 6px;
+	padding: 0;
+	border-left: none;
+	font-size: 100%;
+	font-weight: normal;
+}
+#contents .reserveBox .inputBox dl dt span.note:before {
+	content: none;
+}
+#contents .reserveBox .inputBox dl dt span.btn {
+	float: right;
+	margin: 0;
+	padding: 0;
+	border-left: none;
+	line-height: 1.5;
+	font-size: 13px;
+	font-weight: normal;
+}
+#contents .reserveBox .inputBox dl dt span.btn:before {
+	content: none;
+}
+#contents .reserveBox .inputBox dl dt span.btn a {
+	display: block;
+	padding: 5px 9px 4px 33px;
+	background: url(../../img/front/ico_arrow_04.png) no-repeat 14px center #eee;
+	color: #333;
+}
+#contents .reserveBox .inputBox dl dd {
+	margin: 6px 0 0;
+}
+#contents .reserveBox .inputBox dl dd:nth-child(3) {
+	margin: 18px 0 0;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect {
+	margin: 45px 0 0;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect:nth-child(2) {
+	margin: 6px 0 0;
+}
+#contents .reserveBox .inputBox table {
+	width: 100%;
+}
+#contents .reserveBox .inputBox table th ,
+#contents .reserveBox .inputBox table td {
+	display: table-cell !important;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px dotted #bcbcbc;
+}
+#contents .reserveBox .inputBox table th.spHide ,
+#contents .reserveBox .inputBox table td.spHide {
+}
+#contents .reserveBox .inputBox table tr:first-child th ,
+#contents .reserveBox .inputBox table tr:first-child td {
+	border-top: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox table tr:last-child th ,
+#contents .reserveBox .inputBox table tr:last-child td {
+	border-bottom: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox table th {
+	width: 167px;
+	padding: 14px 10px 13px;
+	background: #f5f5f5;
+}
+#contents .reserveBox .inputBox table .payment th {
+	background: #999;
+	color: #fff;
+}
+#contents .reserveBox .inputBox table .register th {
+	display: block !important;
+	width: auto;
+	border-bottom: 1px dotted #bcbcbc !important;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table th {
+	width: auto;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table th:first-child {
+	width: 147px;
+}
+#contents .reserveBox .inputBox table th span {
+	display: inline-block;
+	padding: 0 0 0 29px;
+}
+#contents .reserveBox .inputBox table th .required + span {
+	padding: 0;
+}
+#contents .reserveBox .inputBox table .register th .required + span {
+	width: 689px;
+	vertical-align: top;
+}
+#contents .reserveBox .inputBox table td {
+	padding: 14px 10px 13px 40px;
+}
+#contents .reserveBox .inputBox table .register td {
+	display: block !important;
+	width: auto;
+	border-top: none !important;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td {
+	padding: 14px 10px 13px;
+	overflow: hidden;
+}
+#contents .reserveBox .inputBox table td em {
+	font-weight: bold;
+}
+#contents .reserveBox .inputBox table tr:first-child td em.blue {
+	color: #369;
+}
+#contents .reserveBox .inputBox table td span {
+	display: inline-block;
+	width: 120px;
+}
+#contents .reserveBox .inputBox table td span.pcHide {
+	display: none !important;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td span {
+	width: 468px;
+	vertical-align: middle;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td .img {
+	width: auto;
+	text-align: right;
+}
+#contents .reserveBox .inputBox table td p {
+	margin: 0 0 9px;
+}
+#contents .reserveBox .inputBox table td p:last-child {
+	margin: 0;
+}
+#contents .reserveBox .inputBox table td p.note {
+	margin: 7px 0 0 !important;
+	line-height: 1.4;
+	font-size: 83.3%;
+}
+#contents .reserveBox .inputBox table td span.note {
+	width: auto;
+	vertical-align: baseline;
+}
+#contents .reserveBox .inputBox table td select {
+	width: 127px;
+	margin: 0 6px 0 0;
+	border: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td select {
+	width: 78px;
+}
+#contents .reserveBox .inputBox table td input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox table td input[type="radio"] {
+	width: 14px;
+	height: 14px;
+	margin: 3px 6px 1px 0;
+	vertical-align: middle;
+}
+#contents .reserveBox .inputBox table td input + label {
+	margin: 0 24px 0 0;
+	vertical-align: middle;
+}
+#contents .reserveBox .inputBox table td input + label:last-child {
+	margin: 0;
+}
+#contents .reserveBox .inputBox table td input[type="text"] ,
+#contents .reserveBox .inputBox table td input[type="email"] ,
+#contents .reserveBox .inputBox table td input[type="tel"] {
+	padding: 1px 4px;
+}
+#contents .reserveBox .inputBox table td input.length01 {
+	width: 136px;
+}
+#contents .reserveBox .inputBox table td input.length02	 {
+	width: 176px;
+}
+#contents .reserveBox .inputBox table td input.length03	 {
+	width: 185px;
+}
+#contents .reserveBox .inputBox table td input.length03 + label {
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	margin: 0 0 0 -1px;
+	border: 1px solid #ccc;
+	background: url(../../img/front/ico_calendar_01.png) no-repeat center center #fff;
+	background-size: 14px;
+	vertical-align: top;
+}
+#contents .reserveBox .inputBox table td input.length04	 {
+	width: 280px;
+}
+#contents .reserveBox .inputBox table td input.length05	 {
+	width: 222px;
+}
+#contents .reserveBox .inputBox table td input.length06	 {
+	width: 88px;
+}
+#contents .reserveBox .inputBox .policyTxt {
+	margin: 0 0 40px;
+	text-align: center;
+}
+#contents .reserveBox .inputBox .policyTxt p {
+	margin: 0 0 9px;
+	line-height: 2.17;
+}
+#contents .reserveBox .inputBox .policyTxt p input {
+	width: 14px;
+	height: 14px;
+	margin: 3px 6px 1px 0;
+	vertical-align: middle;
+}
+#contents .reserveBox .inputBox .policyTxt p input + label {
+	vertical-align: middle;
+}
+#contents .reserveBox .inputBox ul.btn {
+	text-align: center;
+	letter-spacing: -0.5em;
+}
+#contents .reserveBox .inputBox ul.btn li {
+	display: inline-block;
+	margin: 0 40px;
+	vertical-align: top;
+	letter-spacing: 0;
+}
+#contents .reserveBox .inputBox ul.btn li input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 242px;
+	/*height: 42px;*/
+	height: 50px;
+	margin: 0;
+	border: none;
+	border-radius: 2px;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	vertical-align: top;
+	white-space: normal;
+}
+#contents .reserveBox .inputBox ul.btn li.agree input {
+	width: 302px;
+}
+#contents .reserveBox .inputBox ul.btn li.back input {
+	background: #999;
+}
+.akihabara #contents .reserveBox .inputBox ul.btn li input[type="submit"] {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .reserveBox .inputBox ul.btn li input[type="submit"] {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .reserveBox .inputBox ul.btn li input[type="submit"] {	background: #5E6B4A;}/* kyoto */
+#contents .reserveBox .inputBox .reserveSpec {
+	margin: 40px 0;
+	padding: 27px 27px 20px;
+	background: #f5f5f5;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec {
+	margin: 20px 0 230px;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table th {
+	width: auto;
+	padding: 7px 10px 6px;
+	background: #fff;
+	text-align: center;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table th:nth-child(3) {
+	width: 256px;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table th:first-child ,
+#contents .reserveBox .inputBox .reserveSpec .spec table td:first-child {
+	border-left: none;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table th:last-child ,
+#contents .reserveBox .inputBox .reserveSpec .spec table td:last-child {
+	border-right: none;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table td {
+	padding: 19px 10px 18px;
+	background: #fff;
+	text-align: center;
+}
+#contents .reserveBox .inputBox .reserveSpec .total table th {
+	width: 168px;
+	padding: 7px 10px 6px;
+	background: #ccc;
+	text-align: center;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec .total table th {
+	padding: 12px 10px 11px;
+	background: #fff;
+}
+#contents .reserveBox .inputBox .reserveSpec .total table td {
+	padding: 7px 10px 6px 60px;
+	background: #fff;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec .total table td {
+	padding: 12px 10px 11px 20px;
+}
+#contents .reserveBox .inputBox .reserveSpec p.note {
+	margin: 7px 0 0;
+	line-height: 1.4;
+	font-size: 83.3%;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec p {
+	margin: 8px 0;
+	line-height: 1.67;
+	font-size: 100%;
+}
+#contents .reserveBox .inputBox .reserveSpec p.note a {
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .reserveBox .inputBox .reserveSpec p.note a:hover {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+#contents .reserveBox .inputBox dl {
+	margin: 0 0 7.5%;
+}
+#contents .reserveBox.finish .inputBox dl dt {
+	margin: 0 0 9%;
+}
+#contents .reserveBox .inputBox dl dt span {
+	font-size: 83.3%;
+}
+#contents .reserveBox .inputBox dl dt span:before {
+	height: 12px;
+}
+#contents .reserveBox .inputBox dl dt span.btn {
+	font-size: 10px;
+}
+#contents .reserveBox .inputBox dl dt span.btn a {
+	display: block;
+	padding: 3px 9px 2px 28px;
+	background: url(../../img/front/ico_arrow_04.png) no-repeat 11px center #eee;
+	background-size: 4px;
+}
+#contents .reserveBox .inputBox dl dt span.note {
+	font-size: 83.3%;
+}
+#contents .reserveBox .inputBox dl dd {
+	margin: 0;
+}
+#contents .reserveBox .inputBox dl dd:nth-child(3) {
+	margin: 6% 0 0;
+}
+#contents .reserveBox .inputBox table th ,
+#contents .reserveBox .inputBox table td {
+	display: block !important;
+}
+#contents .reserveBox .inputBox table th.spHide ,
+#contents .reserveBox .inputBox table td.spHide {
+	display: none !important;
+}
+#contents .reserveBox .inputBox table th {
+	width: auto;
+	padding: 1px 10px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px dotted #bcbcbc;
+	font-size: 83.3%;
+}
+#contents .reserveBox .inputBox table tr:last-child th{
+	border-bottom: 1px dotted #bcbcbc;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table th:first-child {
+	width: auto;
+}
+#contents .reserveBox .inputBox table th span {
+	padding: 0;
+}
+#contents .reserveBox .inputBox table .register th .required + span {
+	display: inline;
+	width: auto;
+}
+#contents .reserveBox .inputBox table td {
+	padding: 13px 10px 12px;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td {
+	padding: 13px 10px 12px;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td:first-child {
+	border-top: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox table tr:last-child td {
+	border-bottom: 1px solid #ccc !important;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table .cardSelect td {
+	padding: 0 10px;
+	border-top: none;
+	border-bottom: none;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table .cardSelect td:first-child {
+	padding: 13px 10px 0;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table .cardSelect td:last-child {
+	padding: 0 10px 12px;
+	border-bottom: 1px solid #ccc;
+}
+#contents .reserveBox .inputBox table td span {
+	display: block;
+	width: auto;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td span {
+	width: auto;
+}
+#contents .reserveBox .inputBox dl dd.paymentSelect table td .img {
+	margin: 0 0 0 20px;
+	text-align: left;
+}
+#contents .reserveBox .inputBox table td .note {
+	margin: 7px 0 0 !important;
+	line-height: 1.4;
+	font-size: 83.3%;
+}
+#contents .reserveBox .inputBox table td select {
+	margin: 0 3px 0 0;
+}
+#contents .reserveBox .inputBox table td input + label {
+	margin: 0 12px 0 0;
+}
+#contents .reserveBox .inputBox table td input + label:last-child {
+	margin: 0;
+}
+#contents .reserveBox .inputBox table td input.length01 ,
+#contents .reserveBox .inputBox table td input.length02	,
+#contents .reserveBox .inputBox table td input.length04	,
+#contents .reserveBox .inputBox table td input.length05 ,
+#contents .reserveBox .inputBox table td input.length06	{
+	width: 100%;
+}
+#contents .reserveBox .inputBox .policyTxt {
+	margin: 0 0 8%;
+	text-align: left;
+}
+#contents .reserveBox .inputBox .policyTxt p {
+	margin: 0 0 6.7%;
+	line-height: 1.33;
+}
+#contents .reserveBox .inputBox .policyTxt p.check {
+	text-align: center;
+}
+#contents .reserveBox .inputBox ul.btn li {
+	margin: 0 0 3.3%
+}
+#contents .reserveBox .inputBox ul.btn li input {
+	width: 218px;
+	height: 38px;
+	font-size: 14px;
+}
+#contents .reserveBox .inputBox ul.btn li.agree input {
+	width: 218px;
+}
+#contents .reserveBox .inputBox .reserveSpec {
+	margin: 5% 0;
+	padding: 5% 5.8% 5.8%;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec {
+	margin: 5% 0 3.3%;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table td {
+	display: block !important;
+	padding: 0 0 10px;
+	border-left: none;
+	border-right: none;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table td:first-child {
+	border-top: 1px solid #ccc !important;
+}
+#contents .reserveBox .inputBox .reserveSpec .spec table td span.pcHide {
+	display: block !important;
+	margin: 0 0 10px;
+	padding: 2px 10px;
+	border-bottom: 1px dotted #bcbcbc;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec .total table th ,
+#contents .reserveBox.finish .inputBox .reserveSpec .total table td {
+	display: table-cell !important;
+	border: 1px solid #ccc !important;
+}
+#contents .reserveBox .inputBox .reserveSpec .total table th {
+	width: auto;
+	padding: 2px 10px;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec .total table th {
+	width: 55px;
+	padding: 2px 10px;
+}
+#contents .reserveBox .inputBox .reserveSpec .total table td {
+	padding: 10px;
+	text-align: center;
+}
+#contents .reserveBox.finish .inputBox .reserveSpec .total table td {
+	padding: 2px 10px;
+}
+}
+
+/* 予約に関する注意 */
+
+#contents .reserveNote {
+	margin: 72px 196px 150px;
+}
+#contents .reserveNote p {
+	margin: 0 0 18px;
+	padding: 0 0 0 12px;
+	background: url(../../img/front/ico_arrow_03_next.png) no-repeat left 6px;
+	line-height: 1.64;
+	font-size: 91.7%;
+}
+#contents .reserveNote p a {
+	color: #369;
+	text-decoration: underline;
+	opacity: 1;
+}
+#contents .reserveNote p a:hover {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+#contents .reserveNote {
+	margin: 6% 0 9.3%;
+}
+#contents .reserveNote p {
+	line-height: 1.5;
+	font-size: 100%;
+}
+}
+
+/* 規約 */
+
+#contents .policyBox {
+	margin: 48px 166px 140px;
+	text-align: center;
+}
+#contents .policyBox p a {
+	padding: 0 0 0 10px;
+	background: url(../../img/front/ico_arrow_05.png) no-repeat left center;
+	color: #333;
+	opacity: 1;
+}
+#contents .policyBox p a:hover {
+	text-decoration: underline;
+}
+#contents .policyBox .scrollBox {
+	height: 278px;
+	margin: 9px 0 0;
+	padding: 12px 18px;
+	border: 1px solid #ccc;
+	text-align: left;
+	line-height: 1.64;
+	font-size: 91.7%;
+	overflow-y: scroll;
+}
+#contents .policyBox .scrollBox p {
+	margin: 0 0 1.64em;
+}
+#contents .policyBox .scrollBox p.end {
+	text-align: right;
+}
+#contents .policyBox .scrollBox ul {
+	margin: 0 0 1.64em;
+	padding: 0 0 0 2em;
+	list-style: decimal;
+}
+
+@media only screen and (max-width: 768px){
+#contents .policyBox {
+	margin: 8% 0 4%;
+}
+#contents .policyBox .scrollBox {
+	margin: 8% 0 0;
+	padding: 9px 15px;
+	font-size: 83.3%;
+}
+}
+
+/* キャンセルについて */
+
+#contents .policyTable {
+	margin: 30px 100px 110px;
+}
+#contents .policyTable table {
+	width: 100%;
+}
+#contents .policyTable table th ,
+#contents .policyTable table td {
+	padding: 12px 18px;
+	border: 1px solid #ccc;
+	line-height: 1.67;
+}
+#contents .policyTable table th {
+	border-right: none;
+	background: #f5f5f5;
+}
+#contents .policyTable table td {
+	border-left: none;
+}
+#contents .policyTable table td .indent {
+	padding: 0 0 0 1em;
+	text-indent: -1em;
+}
+#contents .policyTable table td .attention {
+	color: #c00;
+}
+
+@media only screen and (max-width: 768px){
+#contents .policyTable {
+	margin: 8% 0 4%;
+}
+#contents .policyTable table th ,
+#contents .policyTable table td {
+	display: block;
+	padding: 2px 10px;
+	font-size: 83.3%;
+}
+#contents .policyTable table th {
+	border-right: 1px solid #ccc;
+}
+#contents .policyTable table td {
+	border-top: none;
+	border-left: 1px solid #ccc;
+}
+}
+
+/*----- マイページ -----*/
+
+#contents .mypageBox {
+	margin: 44px 0 0;
+}
+
+@media only screen and (max-width: 768px){
+#contents .mypageBox {
+	margin: 8.3% 0 0;
+}
+}
+
+/* スタンプ */
+
+#contents .mypageBox .stampTable {
+	margin: 12px 0 34px;
+}
+#contents .mypageBox .stampTable .stampList {
+	margin: 30px 0 0;
+}
+#contents .mypageBox .stampTable .stampList li {
+	position: relative;
+	float: left;
+	width: 168px;
+	box-sizing: border-box;
+	margin: 0 25px 0 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+#contents .mypageBox .stampTable .stampList li:last-child {
+	margin: 0;
+}
+#contents .mypageBox .stampTable .stampList li.stamp01 {
+	background: url(../../img/front/bg_stamp01.png) no-repeat center center #fff;
+}
+#contents .mypageBox .stampTable .stampList li.stamp02 {
+	background: url(../../img/front/bg_stamp02.png) no-repeat center center #fff;
+}
+#contents .mypageBox .stampTable .stampList li.stamp03 {
+	background: url(../../img/front/bg_stamp03.png) no-repeat center center #fff;
+}
+#contents .mypageBox .stampTable .stampList li.stamp04 {
+	background: url(../../img/front/bg_stamp04.png) no-repeat center center #fff;
+}
+#contents .mypageBox .stampTable .stampList li.stamp05 {
+	background: url(../../img/front/bg_stamp05.png) no-repeat center center #fff;
+}
+#contents .mypageBox .stampTable .stampList li span {
+	display: block;
+	padding: 100% 0 0;
+}
+#contents .mypageBox .stampTable .stampList li img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 20px;
+}
+
+@media only screen and (max-width: 768px){
+#contents .mypageBox .stampTable {
+	margin: 3% 0 9%;
+}
+#contents .mypageBox .stampTable .stampList {
+	margin: 9% 0 0;
+}
+#contents .mypageBox .stampTable .stampList li {
+	width: 18%;
+	margin: 0 2.5% 0 0;
+}
+#contents .mypageBox .stampTable .stampList li:last-child {
+	margin: 0;
+}
+#contents .mypageBox .stampTable .stampList li.stamp01 ,
+#contents .mypageBox .stampTable .stampList li.stamp02 ,
+#contents .mypageBox .stampTable .stampList li.stamp03 ,
+#contents .mypageBox .stampTable .stampList li.stamp04 ,
+#contents .mypageBox .stampTable .stampList li.stamp05 {
+	background-size: 100%;
+}
+#contents .mypageBox .stampTable .stampList li img {
+	width: 80%;
+	margin: 10%;
+}
+}
+
+/* 予約一覧 */
+
+#contents .mypageBox .reserveTable {
+	margin: 40px 0 108px;
+}
+#contents .mypageBox .reserveTable .reserveTtl {
+	margin: 0 0 12px;
+	font-size: 116.7%;
+	color: #369;
+}
+#contents .mypageBox .reserveTable table {
+	float: left;
+	width: 50%;
+}
+/*#contents .mypageBox .reserveTable table:last-child {
+	width: 100%;
+}*/
+#contents .mypageBox .reserveTable table th {
+	width: 126px;
+	padding: 13px 10px 12px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #eee;
+	text-align: center;
+}
+#contents .mypageBox .reserveTable table:nth-last-child(2) th {
+	border-bottom: 1px solid #ccc;
+}
+#contents .mypageBox .reserveTable table:last-child th {
+	border-bottom: 1px solid #ccc;
+}
+#contents .mypageBox .reserveTable table td {
+	padding: 13px 10px 12px;
+	border-top: 1px solid #ccc;
+	text-align: center;
+}
+#contents .mypageBox .reserveTable table:nth-child(2n) td {
+	border-right: 1px solid #ccc;
+}
+#contents .mypageBox .reserveTable table:nth-last-child(2) td {
+	border-bottom: 1px solid #ccc;
+}
+
+#contents .mypageBox .reserveTable table:last-child td {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#contents .mypageBox .reserveTable .btn {
+	margin: 18px 0 0;
+	text-align: right;
+}
+#contents .mypageBox .reserveTable .btn a {
+	display: inline-block;
+	width: 134px;
+	padding: 9px 0 8px;
+	background: #ccc;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+}
+
+@media only screen and (max-width: 768px){
+#contents .mypageBox .reserveTable {
+	margin: 9% 0 16.7%;
+}
+#contents .mypageBox .reserveTable:last-child {
+	margin: 9% 0 8%;
+}
+#contents .mypageBox .reserveTable .reserveTtl {
+	margin: 0 0 4%;
+	line-height: 1.67;
+	font-size: 100%;
+}
+#contents .mypageBox .reserveTable table {
+	float: none;
+	width: 100%;
+	font-size: 83.3%;
+}
+#contents .mypageBox .reserveTable table:last-child {
+	width: 100%;
+}
+#contents .mypageBox .reserveTable table th {
+	width: 63px;
+	padding: 4px 10px 3px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #eee;
+	text-align: center;
+}
+#contents .mypageBox .reserveTable table td {
+	padding: 4px 10px 3px;
+	border-right: 1px solid #ccc;
+}
+#contents .mypageBox .reserveTable .btn {
+	margin: 2% 0 0;
+}
+#contents .mypageBox .reserveTable .btn a {
+	font-size: 10px;
+}
+}
+
+/* 予約変更 */
+
+#contents .mypageBox .reserveEdit {
+	margin: 40px 0 108px;
+}
+#contents .mypageBox .reserveEdit .reserveTtl {
+	margin: 0 0 12px;
+	font-size: 116.7%;
+}
+#contents .mypageBox .reserveEdit table {
+	width: 100%;
+}
+#contents .mypageBox .reserveEdit table th {
+	width: 167px;
+	padding: 14px 10px 13px;
+	border: 1px solid #ccc;
+	border-right: none;
+	background: #eee;
+	text-align: center;
+}
+#contents .mypageBox .reserveEdit table td {
+	padding: 14px 10px 13px 40px;
+	border: 1px solid #ccc;
+	border-left: none;
+}
+#contents .mypageBox .reserveEdit table td select {
+	width: 127px;
+	margin: 0 0 0 6px;
+	border: 1px solid #ccc;
+}
+#contents .mypageBox .reserveEdit table td a {
+	display: inline-block;
+	margin: 0 0 0 18px;
+	padding: 4px 10px 3px;
+	border-radius: 2px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+.akihabara #contents .mypageBox .reserveEdit table td a {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .mypageBox .reserveEdit table td a {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .mypageBox .reserveEdit table td a {	background: #5E6B4A;}/* kyoto */
+#contents .mypageBox .reserveEdit ul.btn {
+	margin: 88px 0 0;
+	text-align: center;
+	letter-spacing: -0.5em;
+}
+#contents .mypageBox .reserveEdit ul.btn li {
+	display: inline-block;
+	margin: 0 35px;
+	vertical-align: top;
+	letter-spacing: 0;
+}
+#contents .mypageBox .reserveEdit ul.btn li input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 242px;
+	height: 42px;
+	margin: 0;
+	border: none;
+	border-radius: 2px;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	vertical-align: top;
+}
+#contents .mypageBox .reserveEdit ul.btn li.back input {
+	background: #999;
+}
+.akihabara #contents .mypageBox .reserveEdit ul.btn li input[type="submit"] {	background: #933;}/* akihabara */
+.nihonbashi-east #contents .mypageBox .reserveEdit ul.btn li input[type="submit"] {	background: #244776;}/* nihonbashi-east */
+.kyoto #contents .mypageBox .reserveEdit ul.btn li input[type="submit"] {	background: #5E6B4A;}/* kyoto */
+
+@media only screen and (max-width: 768px){
+#contents .mypageBox .reserveEdit {
+	margin: 9% 0 12.3%;
+}
+#contents .mypageBox .reserveEdit .reserveTtl {
+	margin: 0 0 4%;
+	line-height: 1.67;
+	font-size: 100%;
+}
+#contents .mypageBox .reserveEdit table {
+	font-size: 83.3%;
+}
+#contents .mypageBox .reserveEdit table th {
+	width: 63px;
+	padding: 4px 10px 3px;
+}
+#contents .mypageBox .reserveEdit table td {
+	padding: 4px 10px 3px;
+	text-align: center;
+}
+#contents .mypageBox .reserveEdit table td select {
+	width: 86px;
+}
+#contents .mypageBox .reserveEdit table td a {
+	margin: 0 0 0 6px;
+	padding: 2px 5px 1px;
+	font-size: 10px;
+}
+#contents .mypageBox .reserveEdit ul.btn {
+	margin: 16% 0 0;
+}
+#contents .mypageBox .reserveEdit ul.btn li {
+	margin: 0 0 3.3%;
+}
+#contents .mypageBox .reserveEdit ul.btn li input {
+	width: 218px;
+	height: 38px;
+	font-size: 14px;
+}
+}
+
+
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{outline:0;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+#cboxClose{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	padding: 34px 34px 0 0;
+	background: url(../../img/front/cboxClose.png) no-repeat center center;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 768px){
+#cboxClose{
+	padding: 17px 17px 0 0;
+	background-size: contain;
+}
+}
+

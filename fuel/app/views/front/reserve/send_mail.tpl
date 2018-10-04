@@ -1,0 +1,11 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><--{__('lbl_send_mail')}--></h1>
