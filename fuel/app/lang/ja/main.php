@@ -368,4 +368,15 @@ return array(
     'lbl_zeusu_error8'          => "このカードはお取り扱いできません。詳細に関してはカスタマーサポートセンターまでお問い合わせください。  株式会社ゼウス　カスタマーサポートセンター（24時間365日対応）  TEL:     0570-02-3939　つながらないときは 03-4334-0500",
     'lbl_zeusu_error9'          => "決済処理でエラーが発生しました。",
     'lbl_zeusu_mail'            => "\n \n \n◆事前クレジットカード決済済のお客様へ\n予約のキャンセルと同時に、決済のキャンセルも行われております。\n決済について、ご不明な点は、下記までお問い合わせください。\n \n決済代行会社 株式会社ZEUS　カスタマーサポート\nTel：0570-02-3939(つながらないときは03-4334-0500)\nE-mail：support@cardservice.co.jp",
+
+    'lbl_rsv_login_register'    => "会員登録をして予約する",
+    'lbl_rsv_login_no_register'    => "会員登録せずに予約する",
+    'lbl_rsv_login_no_register_btn'    => "会員登録へ",
+    'lbl_rsv_login_booking_btn'    => "予約ページへ",
+    'lbl_rsv_login_error'    => "メールアドレス・予約番号がみつかりません。",
+    'lbl_rsv_login_change_cancel'    => "予約確認・変更・キャンセル",
+    'lbl_rsv_login_change_cancel_rsv_no'    => "予約番号",
+    'lbl_rsv_login_change_cancel_desc'    => "宿泊予約完了メールに記載されている予約番号と予約時にご入力頂いたメールアドレスを入力し、予約変更ボタンを押してください。",
+
+
 );

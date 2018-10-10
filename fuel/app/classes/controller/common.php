@@ -2,6 +2,7 @@
 class Controller_Common extends Controller_Template
 {
   public $template = 'front/template';
+  //public $template = 'front/template_normal';
 
 
   public function before()
@@ -192,11 +193,11 @@ class Controller_Common extends Controller_Template
         $email->send();
 
       } catch (\EmailValidationFailedException $e) {
-        return __('lbl_error28');       
+        return __('lbl_error28');
 
       } catch(\EmailSendingFailedException $e){
         return __('lbl_error27');
-      
+
       }
 
 

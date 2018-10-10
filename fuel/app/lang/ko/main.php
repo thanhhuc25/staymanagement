@@ -377,4 +377,14 @@ return array(
     'lbl_zeusu_error8'          => "이 카드는 취급할 수 없습니다. 상세한 내용은 고객지원센터에 문의하시기 바랍니다.<br/> 주식회사 제우스 고객지원센터(24시간 365일 대응)<br/> E-mail：support@cardservice.co.jp",
     'lbl_zeusu_error9'          => "결제 처리 중 에러가 발생했습니다.",
     'lbl_zeusu_mail'            => "\n \n \n◆사전에 신용카드 결제를 완료하신 고객님에게\n예약 취소와 동시에 결제 취소도 진행됩니다. \n결제에 대해서 불분명한 점은 아래로 문의해 주십시오. \n결제대행회사 주식회사 ZEUS 고객지원\nE-mail:support@cardservice.co.jp",
+    'lbl_rsv_login_register'    => "회원 가입을하고 예약",
+    'lbl_rsv_login_no_register'    => "회원 가입없이 예약",
+    'lbl_rsv_login_no_register_btn'    => "회원 등록에",
+    'lbl_rsv_login_booking_btn'    => "예약 페이지로",
+    'lbl_rsv_login_error'    => "이메일 주소 예약 번호를 찾을 수 없습니다.",
+    'lbl_rsv_login_change_cancel'    => "예약 확인 · 변경 · 취소",
+    'lbl_rsv_login_change_cancel_rsv_no'    => "예약 번호",
+    'lbl_rsv_login_change_cancel_desc'    => "예약 완료 메일에 기재되어있는 예약 번호와 예약시 입력하신 이메일 주소를 입력하고 예약 변경 버튼을 누르십시오.",
+
+
 );

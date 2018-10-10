@@ -37,6 +37,7 @@ class Controller_Front_Reserve extends Controller_Common
   **/
   public function action_index($id)
   {
+
     $ids = explode(EXPLODE, $id);
 
     if (count($ids) != 7) {
@@ -132,7 +133,13 @@ class Controller_Front_Reserve extends Controller_Common
         'passreminder' => HTTP.'/'.$this->htl_name.'/password',
         'action'       => $this->htl_name.'/login_a',
         'action2'      => $this->htl_name.'/rsvlogin',
+        'action3'      => $this->htl_name.'/reserve/signup',
+        'is_from_rsv'  => true
       );
+
+      // delete session login
+      Session::delete('no_register_member');
+      Session::delete('no_member_user');
 
       $this->template->mypage_flg = true;
       $this->template->js = '';
@@ -146,7 +153,11 @@ class Controller_Front_Reserve extends Controller_Common
   {
     if ($rsv_info = Session::get('RSV_INFO')) {
       // Session::delete('rsv_info');
-      $this->no_member($rsv_info);
+        $data = Input::post();
+        if(isset($data["no_register_member"])){
+            Session::set('no_register_member', true);
+        }
+        $this->no_member($rsv_info);
     }else{
       Session::set_flash(__('lbl_error1'));
       Response::redirect($this->htl_name.'/plan');
@@ -207,7 +218,9 @@ class Controller_Front_Reserve extends Controller_Common
       'error'     => Session::get_flash('error'),
       // 'ids'       => $ids,
       'price_total'  => $rsv_info['payment_info']['price_total'],
+      'is_register_member'  => Session::get('no_register_member') ? false : true,
       );
+
 
     $data['login_url'] = HTTP.'/'.$this->htl_name.'/login';
     $data['mypage_url'] = HTTP.'/'.$this->htl_name.'/mypage';
@@ -456,12 +469,13 @@ class Controller_Front_Reserve extends Controller_Common
       // $url = $_SERVER['HTTP_REFERER'];
       Response::redirect($url);
     }
-    if (!isset($data['register']) || $data['register'] != '1') {
-      Session::set_flash('error',__('lbl_error17'));
-      Session::set_flash('form', $data);
-      // $url = $_SERVER['HTTP_REFERER'];
-      Response::redirect($url);
-    }
+    //@todo no check box register
+//    if (!isset($data['register']) || $data['register'] != '1') {
+//      Session::set_flash('error',__('lbl_error17'));
+//      Session::set_flash('form', $data);
+//      // $url = $_SERVER['HTTP_REFERER'];
+//      Response::redirect($url);
+//    }
 
     if (!$rsv_info = Session::get('RSV_INFO')) {
       Session::set_flash('error',__('lbl_error1'));
@@ -519,7 +533,140 @@ class Controller_Front_Reserve extends Controller_Common
     }
 
     Session::set('RSV_INFO', $rsv_info);
-    $this->no_member_confirm($data, $rsv_info);
+    if(!isset($data["register"])){
+        Session::set("no_member_user", $data);
+        $this->no_member_no_register_confirm($data, $rsv_info);
+    }
+    else{
+        $this->no_member_confirm($data, $rsv_info);
+    }
+
+  }
+
+  private function no_member_no_register_confirm($data, $rsv_info){
+      $rsv_info['post'] = $data;
+      $param = $rsv_info['ids'];
+      $format = 'Ymd';
+      $datec = DateTime::createFromFormat($format, $rsv_info['ids']['stay_date']);
+      $date =  $datec->format('Y-m-d');
+      $start = $date;
+      // $add_pt = 1;
+      if (isset($data['privilege']) && $data['privilege'] == '2') {
+          $rsv_info['payment_info']['final_price'] = $rsv_info['payment_info']['price_total'] - DISCOUNT;
+          $rsv_info['discount_flg'] = '1';
+          $pt = DISCOUNT_POINT;
+          $add_pt = 0;
+      }else{
+          $rsv_info['payment_info']['final_price'] = $rsv_info['payment_info']['price_total'];
+          $rsv_info['post']['privilege'] = '1';//        ポイントが５未満の場合は割引が選択肢にないため、一応、再度定義する。
+          $rsv_info['discount_flg'] = '0';
+          $pt = 0;
+      }
+      if ($data['paymentFlg'] == 1) {
+          if ($rsv_info['payment_info']['final_price'] < 0) {
+              $rsv_info['payment_info']['final_price'] = 0;
+          }
+      }else if ($data['paymentFlg'] == 2) {
+          if ($rsv_info['payment_info']['final_price'] <= 0) {
+              Session::set_flash('error',__('lbl_error6'));
+              $url = $_SERVER['HTTP_REFERER'];
+              Response::redirect($url);
+          }
+      }
+      $flg =  $this->stock_list($param);
+      if ($flg != '0') {
+          Session::set_flash('error',__('lbl_error7'));
+          $url = $_SERVER['HTTP_REFERER'];
+          Response::redirect($url);
+      }else{
+          $rsv_manage = Model_T_Rsv_Manage::forge();
+          $result = $rsv_manage->rsvno_check($this->htl_id);
+
+          if ($result['0'] == '0') {
+              $rsv_info['RSV_NO'] = $result['1'];
+          }else{
+              Session::set_flash('error',__('lbl_error1'));
+              Response::redirect($this->htl_name.'/plan');
+              error_log(date('m/d h:i:s').__CLASS__."\n" . __LINE__ . '行:' .print_r($result['1'],true) . "\n");
+          }
+      }
+
+
+      Session::set('RSV_INFO', $rsv_info);
+      if ($data['paymentFlg'] == 1) {
+          $this->no_member_no_register_rsv_confirm($data);
+      }else{
+          Response::redirect($this->htl_name.'/reserve/credit_setting');
+      }
+
+  }
+
+  private function no_member_no_register_rsv_confirm($data){
+      if (!$rsv_info = Session::get('RSV_INFO')) {
+          Session::set_flash('error',__('lbl_error1'));
+          Response::redirect($this->htl_name.'/plan');
+      }
+      $user_data = [
+          "USR_MAIL"=>$data["email"],
+          "USR_NAME"=>$data["name"].$data["name2"],
+          "USR_KANA"=>$data["kana"].$data["kana2"],
+      ];
+
+      $plan_data  = Model_M_Plan::find_one_by(array('HTL_ID' => $this->htl_id, 'PLN_ID' => $rsv_info['ids']['pln_id']));
+      $rtype_data = Model_M_Rtype::find_one_by(array('HTL_ID' => $this->htl_id, 'TYPE_ID' => $rsv_info['ids']['type_id']));
+      $htl_data   = Model_M_Htl::find_by_pk($this->htl_id);
+      //$user_data  = Model_M_Usr::find_by_pk($user['user_id']);
+      if (!$plan_data || !$rtype_data || !$htl_data) {
+          Session::set_flash('error',__('lbl_error1'));
+          Response::redirect($this->htl_name.'/plan');
+      }
+      $data = array();
+
+      $data['price']            = $rsv_info['payment_info']['convert_price_list'];
+      $data['price_total']      = $rsv_info['payment_info']['final_price'];
+      $data['price_sum']        = $rsv_info['payment_info']['price_sum'];
+      $data['person_total_num'] = $rsv_info['ids']['room_num'] * $rsv_info['ids']['person_num'];
+      $data['param']            = $rsv_info['ids'];
+      $data['plan']             = $plan_data;
+      $data['user']             = $user_data;
+      $data['rtype']            = $rtype_data;
+      $data['plan']['CHECK_IN'] = $rsv_info['post']['ciTime'];
+
+      $arrive_date = $rsv_info['ids']['stay_date'];
+      $leave_date = date('Ymd', strtotime($arrive_date.' + '.$rsv_info['ids']['stay_count'].' day'));
+      $cancel_pay_date = date('Ymd', strtotime($arrive_date.' - 4 day'));
+      $format = 'Ymd';
+
+      $datec = DateTime::createFromFormat($format, $arrive_date);
+      $data['plan']['DATE']     = $datec->format(__('date_format').'('.Config::get('staym.weeks.'.__('use_lang').'.'.$datec->format('w')).')');
+
+      $datec = DateTime::createFromFormat($format, $leave_date);
+      $data['plan']['DATE2']    = $datec->format(__('date_format').'('.Config::get('staym.weeks.'.__('use_lang').'.'.$datec->format('w')).')');
+
+      $datec = DateTime::createFromFormat($format, $cancel_pay_date);
+      $data['plan']['DATE3']    = $datec->format(__('date_format').'('.Config::get('staym.weeks.'.__('use_lang').'.'.$datec->format('w')).')');
+
+      $data['login_url']        = HTTP.'/'.$this->htl_name;
+      $data['mypage_url']       = HTTP.'/'.$this->htl_name.'/mypage';
+      $data['action']           = $this->htl_name.'/reserve/order';
+      $data['ccl_policy']       = $htl_data['CCL_RULE'];
+      $data['name']             = $user_data['USR_NAME'];
+      $data['discount_flg']     = $rsv_info['discount_flg'];
+
+      // 多言語対応
+      $array = $this->m_nm_common($rsv_info);
+      $data['plan']['PLN_NAME'] = $array['plan_data']['PLN_NAME'];
+      $data['rtype']['TYPE_NAME'] = $array['plan_data']['TYPE_NAME'];
+
+      $this->template->js = '';
+      $this->template->title = __('lbl_front_title');
+
+      // send to view
+      $data["no_member"] = true;
+
+
+      $this->template->content = View_Smarty::forge('front/reserve/member_confirm',$data);
+
   }
 
   public function action_credit_setting()
@@ -811,10 +958,12 @@ class Controller_Front_Reserve extends Controller_Common
       }
     }
 
+
     $plan_data  = Model_M_Plan::find_one_by(array('HTL_ID' => $this->htl_id, 'PLN_ID' => $rsv_info['ids']['pln_id']));
     $rtype_data = Model_M_Rtype::find_one_by(array('HTL_ID' => $this->htl_id, 'TYPE_ID' => $rsv_info['ids']['type_id']));
     $htl_data   = Model_M_Htl::find_by_pk($this->htl_id);
     $user_data  = Model_M_Usr::find_by_pk($user['user_id']);
+
 
     if (!$plan_data || !$rtype_data || !$htl_data || !$user_data) {
       Session::set_flash('error',__('lbl_error1'));
@@ -953,15 +1102,47 @@ class Controller_Front_Reserve extends Controller_Common
       Session::set_flash('error',__('lbl_error1'));
       Response::redirect(HTTP.'/'.$this->htl_name.'/plan');
     }
-    if (!$user = Session::get('user_data')) {
-      // シークレットプランはログイン不要
-      if ($tmp = Session::get('secret_plan')) {
-        $user['user_id'] = $tmp['user_id'];
-      } else {
-        Session::set_flash('error',__('lbl_error1'));
-        Response::redirect($this->htl_name.'/plan');
-      }
+
+    // no member
+
+      $post_data = Input::post();
+    if(isset($post_data["no_member"]) && $post_data["no_member"]==1){
+        $data = Session::get("no_member_user");
+        $param_user = array(
+          'USR_NAME'  => $data['name'].$data['name2'],
+          'USR_KANA'  => $data['kana'].$data['kana2'],
+          'USR_SEI'   => $data['name'],
+          'USR_MEI'   => $data['name2'],
+          'KANA_SEI'  => $data['kana'],
+          'KANA_MEI'  => $data['kana2'],
+          'ZIP_CD'    => $data['zipcode'],
+          'USR_ADR1'  => $data['address1'],
+          'USR_ADR2'  => $data['address2'],
+          'USR_TEL'   => $data['tel'],
+          'USR_FAX'   => $data['fax'],
+          'USR_SEX'   => $data['gender'],
+          'USR_BIRTH' => $data['ciDate'],
+
+          'RANK_ID'   =>'2',
+          'USR_MAIL'  => $data['email'],
+      );
+
+      $user_new = Model_M_Usr::forge();
+      $user_id = $user_new->insert_user($param_user);
+      $user = ["user_id"=>$user_id[0], "user_name"=>$param_user["USR_NAME"]];
+    } else{
+        if (!$user = Session::get('user_data')) {
+            // シークレットプランはログイン不要
+            if ($tmp = Session::get('secret_plan')) {
+                $user['user_id'] = $tmp['user_id'];
+            } else {
+                Session::set_flash('error',__('lbl_error1'));
+                Response::redirect($this->htl_name.'/plan');
+            }
+        }
     }
+
+
 
     $user_data = Model_M_Usr::find_by_pk($user['user_id']);
     $plan_data  = Model_M_Plan::find_one_by(array('HTL_ID' => $this->htl_id, 'PLN_ID' => $rsv_info['ids']['pln_id']));

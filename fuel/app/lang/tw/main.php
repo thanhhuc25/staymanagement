@@ -377,4 +377,14 @@ return array(
     'lbl_zeusu_error8'          => "該信用卡不予受理。詳情請向客服中心咨詢。<br/>   株式會社ZEUS　客服中心（24小時365天服務）<br/> E-mail：support@cardservice.co.jp",
     'lbl_zeusu_error9'          => "處理支付時發生了錯誤。",
     'lbl_zeusu_mail'            => "\n \n \n◆致事先以信用卡支付的用戶\n取消預訂時，支付也將一同取消。\n關於支付，若有疑問，請通過下方聯絡方式咨詢。\n支付代理公司 株式會社ZEUS 客服\nE-mail：support@cardservice.co.jp",
+    'lbl_rsv_login_register'    => "進行會員註冊並進行預訂",
+    'lbl_rsv_login_no_register'    => "預訂沒有訂閱",
+    'lbl_rsv_login_no_register_btn'    => "會員註冊",
+    'lbl_rsv_login_booking_btn'    => "到預訂頁面",
+    'lbl_rsv_login_error'    => "無法找到電子郵件地址/預訂號碼。",
+    'lbl_rsv_login_change_cancel'    => "預訂確認/更改/取消",
+    'lbl_rsv_login_change_cancel_rsv_no'    => "預訂號碼",
+    'lbl_rsv_login_change_cancel_desc'    => "請輸入住宿預訂完成電子郵件中所述的預約號碼以及預訂時輸入的電子郵件地址，然後按預約更改按鈕。",
+
+
 );

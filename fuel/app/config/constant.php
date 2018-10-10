@@ -172,6 +172,9 @@ define('URL_USER_PASSWORD_RESET', 'password_reset');
 define('ROUTE_SETLANGUAGE', 'front/user/language/$1');
 define('URL_SETLANGUAGE', 'language/(:any)');
 
+define('ROUTE_RSV_LOGIN_TO_CHANGE_CANCEL', 'front/user/rsv_change_cancel');
+define('URL_RSV_LOGIN_TO_CHANGE_CANCEL', 'rsv_change_cancel');
+
 /*secret----------------------------------------*/
 
 define('ROUTE_SECRET', 'front/secret/$1');
@@ -306,7 +309,7 @@ define('URL_SECRET_HTL1' , HTL1.'/'.URL_SECRET);
 
 define('URL_SECRET_LIST_HTL1' , HTL1.'/'.URL_SECRET_LIST);
 
-
+define('URL_RSV_LOGIN_CHANGE_CANCEL_HTL1', HTL1.'/'.URL_RSV_LOGIN_TO_CHANGE_CANCEL);
 
 
 
@@ -440,7 +443,7 @@ define('URL_SECRET_HTL2', HTL2.'/'.URL_SECRET);
 
 define('URL_SECRET_LIST_HTL2' , HTL2.'/'.URL_SECRET_LIST);
 
-
+define('URL_RSV_LOGIN_CHANGE_CANCEL_HTL2', HTL2.'/'.URL_RSV_LOGIN_TO_CHANGE_CANCEL);
 
 
 /*htl name----------------------------------------*/
@@ -566,7 +569,7 @@ define('URL_SECRET_HTL3', HTL3.'/'.URL_SECRET);
 
 define('URL_SECRET_LIST_HTL3' , HTL3.'/'.URL_SECRET_LIST);
 
-
+define('URL_RSV_LOGIN_CHANGE_CANCEL_HTL3', HTL3.'/'.URL_RSV_LOGIN_TO_CHANGE_CANCEL);
 
 
 /*htl name----------------------------------------*/
@@ -692,7 +695,7 @@ define('URL_SECRET_HTL4', HTL4.'/'.URL_SECRET);
 
 define('URL_SECRET_LIST_HTL4' , HTL4.'/'.URL_SECRET_LIST);
 
-
+define('URL_RSV_LOGIN_CHANGE_CANCEL_HTL4', HTL4.'/'.URL_RSV_LOGIN_TO_CHANGE_CANCEL);
 
 
 /*htl name----------------------------------------*/
@@ -779,4 +782,6 @@ define('URL_USER_PASSWORD_RESET_HTL5', HTL5.'/'.URL_USER_PASSWORD_RESET);
 define('URL_SETLANGUAGE_HTL5', HTL5.'/'.URL_SETLANGUAGE);
 define('URL_SECRET_HTL5', HTL5.'/'.URL_SECRET);
 define('URL_SECRET_LIST_HTL5' , HTL5.'/'.URL_SECRET_LIST);
+
+define('URL_RSV_LOGIN_CHANGE_CANCEL_HTL5', HTL5.'/'.URL_RSV_LOGIN_TO_CHANGE_CANCEL);
 

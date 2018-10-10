@@ -27,24 +27,45 @@
 <p class="btn"><input type="submit" value="<?php echo __('lbl_login');?>"></p>
 <?php echo Form::close();?>
 </div>
-<div class="inputBox">
-<!-- <h3 class="col2">非会員の方で<br>予約確認・変更・取消される方</h3> -->
-<h3 class="col2"><?php echo __('lbl_no_member');?></h3>
-<?php echo Form::open($action2); ?>
-<div class="inputForm" style="height: 105px">
-<dl>
-<!-- <dt>メールアドレス</dt> -->
-<!-- <dd><input type="email" name="loginMail" id="loginMail02"></dd> -->
-</dl>
-<dl>
-<!-- <dt>ご予約NO.</dt> -->
-<!-- <dd><input type="tel" name="reserveNum" id="reserveNum01"></dd> -->
-</dl>
-</div>
-<!-- <p class="btn"><input type="submit" value="送　信"></p> -->
-<p class="btn" style="position: relative; top: -80px;"><input type="submit" value="<?php echo __('lbl_signup');?>"></p>
-<?php echo Form::close();?>
-</div>
+    <?php if(isset($is_from_rsv) && $is_from_rsv==true): ?>
+
+        <div class="inputBox">
+            <h3 class="col2"><?php echo __('lbl_rsv_login_register');?></h3>
+            <?php echo Form::open($action3); ?>
+            <p class="btn" style="margin:20px 0 32px">
+                <input type="submit" value="<?php echo __('lbl_rsv_login_no_register_btn');?>">
+            </p>
+            <?php echo Form::close();?>
+            <?php echo Form::open($action3); ?>
+            <h3 class="col2"><?php echo __('lbl_rsv_login_no_register');?></h3>
+            <p class="btn" style="margin:20px 0 0">
+                <input type="submit" name="no_register_member" value="<?php echo __('lbl_rsv_login_booking_btn');?>">
+            </p>
+            <?php echo Form::close();?>
+
+        </div>
+
+    <?php else : ?>
+        <div class="inputBox">
+            <!-- <h3 class="col2">非会員の方で<br>予約確認・変更・取消される方</h3> -->
+            <h3 class="col2"><?php echo __('lbl_no_member');?></h3>
+            <?php echo Form::open($action2); ?>
+            <div class="inputForm" style="height: 105px">
+                <dl>
+                    <!-- <dt>メールアドレス</dt> -->
+                    <!-- <dd><input type="email" name="loginMail" id="loginMail02"></dd> -->
+                </dl>
+                <dl>
+                    <!-- <dt>ご予約NO.</dt> -->
+                    <!-- <dd><input type="tel" name="reserveNum" id="reserveNum01"></dd> -->
+                </dl>
+            </div>
+            <!-- <p class="btn"><input type="submit" value="送　信"></p> -->
+            <p class="btn" style="position: relative; top: -80px;"><input type="submit" value="<?php echo __('lbl_signup');?>"></p>
+            <?php echo Form::close();?>
+        </div>
+    <?php endif; ?>
+
 </div>
 </section>
 </div>

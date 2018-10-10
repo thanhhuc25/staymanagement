@@ -93,7 +93,8 @@ class Controller_Front_User extends Controller_Common
   public function action_mypage()
   {
     if (!$user_data = Session::get('user_data')) {
-      Response::redirect($this->htl_name.'/login');
+      //Response::redirect($this->htl_name.'/login');
+        Response::redirect($this->htl_name.'/rsv_change_cancel');
       // $user_data = array('user_name' =>  __('lbl_guest'), );
     }
 
@@ -125,7 +126,6 @@ class Controller_Front_User extends Controller_Common
 
   public function action_rsvlogin()
   {
-
 
     Response::redirect($this->htl_name.'/reserve/signup');
 
@@ -836,6 +836,40 @@ class Controller_Front_User extends Controller_Common
         Response::redirect(HTTP.'/'.$this->htl_name.'/plan/search');
       }
     }
+  }
+
+
+  public function action_rsv_change_cancel(){
+      // check post method
+      $method = Input::method();
+      if(strtolower($method)=="post"){
+          $data = Input::post();
+          $rsv_no = isset($data["reserve_num"]) ? $data["reserve_num"] : "";
+          $email = isset($data["reserve_mail"]) ? $data["reserve_mail"] : "";
+          $rsv_no = str_replace("stm","",$rsv_no);
+          $rsv = Model_T_Rsv::forge();
+          $result = $rsv->get_rsv_no_member($rsv_no, $email);
+          if(count($result)<1){
+              Session::set_flash('error', __('lbl_rsv_login_error'));
+          } else
+          {
+              $user_data = $result[0];
+              Session::set('user_data',array('user_id' => $user_data['USR_ID'], 'user_name' => $user_data['USR_NAME']));
+              Session::set('rsv_get_value', $rsv_no);
+              Response::redirect($this->htl_name.'/reserve/edit/'.$rsv_no);
+          }
+
+      }
+      // get method
+      $data = array(
+          'error' => Session::get_flash('error'),
+          'htl_id' => $this->htl_id,
+          'action' => HTTP.'/'.$this->htl_name.'/rsv_change_cancel',
+      );
+      $this->template->mypage_flg = true;
+      $this->template->js = '';
+      $this->template->title = __('lbl_front_title');
+      $this->template->content = View_Smarty::forge('front/rsv_login_change_cancel',$data);
   }
 
   public function router($action, $code)

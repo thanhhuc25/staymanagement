@@ -108,7 +108,12 @@
 <p><--{__('lbl_confirm2')}--></p>
 </div>
 <ul class="btn">
-<li><input type="submit" value="<--{__('lbl_reserve_button')}-->"></li>
+<li>
+    <--{if (isset($no_member) && $no_member==true)}-->
+    <input type="hidden" name="no_member" value="1">
+    <--{/if}-->
+    <input type="submit" value="<--{__('lbl_reserve_button')}-->">
+</li>
 <li class="back"><input type="button"  value="<--{__('lbl_back')}-->" onClick="history.go(-1);"></li>
 </ul>
 <--{Form::close()}-->

@@ -368,4 +368,14 @@ return array(
     'lbl_zeusu_error8'          => "This credit card cannot be processed.  Please contact our customer service for more information.  <br/>Zeus Co., Ltd Customer Support Center （Open 24/7）<br/> E-mail：support@cardservice.co.jp",
     'lbl_zeusu_error9'          => "An error has occurred while processing your payment.",
     'lbl_zeusu_mail'            => "\n \n \nCustomers who have already made credit card payment\nPayment has been cancelled upon cancellation of reservation.\nFor more information please contact our Customer Support Center.\nZeus Co., Ltd Customer Support Center\nE-mail：support@cardservice.co.jp",
+    'lbl_rsv_login_register'    => "Reservation and register",
+    'lbl_rsv_login_no_register'    => "Reserve without register",
+    'lbl_rsv_login_no_register_btn'    => "Register",
+    'lbl_rsv_login_booking_btn'    => "Reservation",
+    'lbl_rsv_login_error'    => "E-mail address / reservation number can not be found.",
+    'lbl_rsv_login_change_cancel'    => "Reservation confirmation / change / cancellation",
+    'lbl_rsv_login_change_cancel_rsv_no'    => "Reservation number",
+    'lbl_rsv_login_change_cancel_desc'    => "Please enter the reservation number and the email address, click the reservation change button.",
+
+
 );

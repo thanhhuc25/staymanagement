@@ -146,22 +146,25 @@
 </table>
 </dd>
 </dl>
-<dl>
-<dt><span><--{__('lbl_about_regist')}--></span></dt>
-<dd>
-<table>
-<tr class="register">
-<!-- <th><span class="required"><--{__('lbl_required')}--></span><span><--{__('lbl_regist_msg')}--></span></th> -->
-<th><span class="required"><--{__('lbl_required')}--></span><span><--{__('lbl_signup')}--></span></th>
-<td>
-<input type="radio" name="register" id="register01" value="1" checked="checked"><label for="register01"><--{__('lbl_do')}--></label>
-<!-- <input type="radio" name="register" id="register01" value="1"><label for="register01">する</label> -->
-<!-- <input type="radio" name="register" id="register02" value="2"><label for="register02">しない</label> -->
-</td>
-</tr>
-</table>
-</dd>
-</dl>
+    <--{if ($is_register_member)}-->
+    <dl>
+        <dt><span><--{__('lbl_about_regist')}--></span></dt>
+        <dd>
+            <table>
+                <tr class="register">
+                    <!-- <th><span class="required"><--{__('lbl_required')}--></span><span><--{__('lbl_regist_msg')}--></span></th> -->
+                    <th><span class="required"><--{__('lbl_required')}--></span><span><--{__('lbl_signup')}--></span></th>
+                    <td>
+                        <input type="radio" name="register" id="register01" value="1" checked="checked"><label for="register01"><--{__('lbl_do')}--></label>
+                        <!-- <input type="radio" name="register" id="register01" value="1"><label for="register01">する</label> -->
+                        <!-- <input type="radio" name="register" id="register02" value="2"><label for="register02">しない</label> -->
+                    </td>
+                </tr>
+            </table>
+        </dd>
+    </dl>
+    <--{/if}-->
+
 <div class="policyTxt">
 <p><--{__('lbl_ssl')}--></p>
 <p class="check"><input type="checkbox" name="policy" id="policy01"><label for="policy01"><--{__('lbl_agree')}--></label></p>
